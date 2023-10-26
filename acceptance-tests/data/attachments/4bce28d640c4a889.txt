@@ -1,0 +1,147 @@
+{
+  "required_lines": [
+
+  ],
+  "known_failures": [
+    {
+      "values": [
+        "[-] [should start W32Time] FAILED: should start W32Time"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should start W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should stop W32Time] FAILED: should stop W32Time"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should stop W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should list services] FAILED: should list services"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should list services] Exception: NoMethodError: undefined method `service' for nil:NilClass"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return info on a given service winmgmt] FAILED: should return info on a given service winmgmt"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return info on a given service winmgmt] Exception: NoMethodError: undefined method `service' for nil:NilClass"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] FAILED: should create a service testes"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return info on the newly-created service testes] FAILED: should return info on the newly-created service testes"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return info on the newly-created service testes] Exception: NoMethodError: undefined method `service' for nil:NilClass"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should delete the new service testes] FAILED: should delete the new service testes"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should delete the new service testes] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return status on a given service winmgmt] FAILED: should return status on a given service winmgmt"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should return status on a given service winmgmt] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should modify config on a given service] FAILED: should modify config on a given service"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should modify config on a given service] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] FAILED: should start a disabled service"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should restart a started service W32Time] FAILED: should restart a started service W32Time"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should restart a started service W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6."
+      ],
+      "options": {
+      }
+    }
+  ]
+}

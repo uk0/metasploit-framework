@@ -1,0 +1,43 @@
+use python/meterpreter_reverse_tcp
+msf6 post(test/extapi) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-qp06v9txt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-qp06v9txt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-fmv57g.py -f raw AutoVerifySessionTimeout=30 lport=6011 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5252-calmbgtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24924 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-fmv57g.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 10
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6011 
+[*] Meterpreter session 11 opened (127.0.0.1:6011 -> 127.0.0.1:50111) at 2023-10-26 19:05:00 +0000
+use test/registry
+msf6 post(test/registry) > run session=11 AddEntropy=true Verbose=true
+[*] Running against session 11
+[*] Session type is meterpreter and platform is windows
+[+] should create keys
+[+] should write REG_BINARY values
+[+] should write REG_DWORD values
+[+] should write REG_EXPAND_SZ values
+[+] should write REG_MULTI_SZ values
+[+] should write REG_QWORD values
+[+] should write REG_SZ values
+[+] should delete keys
+[+] should create unicode keys
+[+] should write REG_SZ unicode values
+[+] should delete unicode keys
+[+] should evaluate key existence
+[*] PENDING: should evaluate value existence
+[+] should read values
+[+] should read values with a 32-bit view
+[+] should read values with a 64-bit view
+[+] should return normalized values
+[+] should enumerate keys and values
+[*] Testing complete in 7.48 seconds
+[*] Passed: 17; Failed: 0; Skipped: 0
+[*] Post module execution completed
+msf6 post(test/registry) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 11 closed.
+msf6 post(test/registry) > Stopping all jobs...
+msf6 post(test/registry) > 

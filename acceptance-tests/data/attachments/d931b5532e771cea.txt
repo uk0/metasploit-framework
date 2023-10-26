@@ -1,0 +1,49 @@
+D:/a/metasploit-framework/metasploit-framework/vendor/bundle/ruby/3.0.0/gems/rex-core-0.1.31/lib/rex/compat.rb:381: warning: Win32API is deprecated after Ruby 1.9.1; use fiddle directly instead
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+msf6 > loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+msf6 > use php/meterpreter_reverse_tcp
+msf6 payload(php/meterpreter_reverse_tcp) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3060-f5k8ibtxt
+msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3060-f5k8ibtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3060-6rhewi.php -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-3060-gn0r9atxt MeterpreterDebugBuild=true
+[*] Writing 34914 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3060-6rhewi.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 0
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:50002) at 2023-10-26 19:03:57 +0000
+use test/search
+msf6 post(test/search) > run session=1 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-vyidnhmk
+[*] meterpreter-test-dir-vyidnhmk created
+[*] Setup: Now in C:\Users\RUNNER~1\AppData\Local\Temp\meterpreter-test-dir-vyidnhmk
+[*] Source File Name: meterpreter-test-lyhxdjvn.txt
+[*] Running against session 1
+[*] Session type is meterpreter and platform is windows
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[*] Session does not support setting the modified date, skipping exact date tests
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Testing complete in 0.15 seconds
+[*] Passed: 7; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to D:\a\metasploit-framework\metasploit-framework
+[*] Post module execution completed
+msf6 post(test/search) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+msf6 post(test/search) > Stopping all jobs...
+msf6 post(test/search) > 

@@ -1,0 +1,256 @@
+Final status:
+Process still alive after running test suite
+stdout and stderr:
+DEBUG:root:[*] running method core_negotiate_tlv_encryption
+DEBUG:root:[*] Negotiating TLV encryption
+DEBUG:root:[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100c0e7ae8af2ac39bc404304285c909a897c56e8fbfe4c517d185b77a0f6fc66a3026aac09eb904c0fcecd168026e1db5452572dba7bee1e55a94e6f5c8553bdbff3b85ad24e67cfb071bdc6d7524eb2965252e3a95cee750d012e2b8f63fa3f715b2bbdb6d0c8aad1d99d45d740ad278aa20f9dc84dd732f7da579add139928229532d40e5acad811eb0da08f04b7ad1736275ad19d888e95567a075d286b1dcbb872fb6d02faac0f60995bfc48753ff69551d987c70219b6b577eb7ce16840789a5f91c666d936040fcd77e1777617a714c6a188100f7c887ea25fe47b6c5d68813fad53ea1c5be6e685ca8d45c7e9b64c2bdf7169c4e116b943784c07fc42c30203010001
+DEBUG:root:[*] AES key: 0xdb2630a1aca14a41859fb5ae377a59c08d7148ce86b008c1457f9b442e73b1fb
+DEBUG:root:[*] Encrypted AES key: 0x8f2c39ae3195ecd941acb465b3dfd8cc787bd0098b09ad86769b375307ba7341eac5d6a6c5eedcb61e036198618ee6c4e176711fbfbc1f8f2f9359208052bcf67fed9f0dab016ec7aee059a6de161bc51b6e812b7a3680fa1e682295e61130f427013afe651d85f286eef5c9786277433973362a6417f9e628b7ce00dc5411e009a9e97caceb543181752a1b027319f053589b336219638bc33e34d58c9924c3c1eebe7d4f2770c4f98f43c0880f99deb12f911001c60b8edf182b93f30f04436e9e7da3e4e02d6299d34a972f5dbd231f3737643177541f868e9d11a315317287588ab869b197d0309409238ccced53992c3134ed88926600f70a2eac6c1831
+DEBUG:root:[*] TLV encryption sorted
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_session_guid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_loadlib
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_sysinfo
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_uuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo MzHZ 1>&2']
+DEBUG:root:[*] added process id: 4410, handle: 1
+DEBUG:root:[*] added channel id: 1 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo AzsV']
+DEBUG:root:[*] added process id: 4416, handle: 2
+DEBUG:root:[*] added channel id: 2 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 2
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'sleep 1; echo iCYK']
+DEBUG:root:[*] added process id: 4417, handle: 3
+DEBUG:root:[*] added channel id: 3 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 3
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo xVUj; sleep 1; echo hOYL']
+DEBUG:root:[*] added process id: 4430, handle: 4
+DEBUG:root:[*] added channel id: 4 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 4
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo Zuyk']
+DEBUG:root:[*] added process id: 4438, handle: 5
+DEBUG:root:[*] added channel id: 5 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 5
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo ailz']
+DEBUG:root:[*] added process id: 4439, handle: 6
+DEBUG:root:[*] added channel id: 6 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 6
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo WSsQ']
+DEBUG:root:[*] added process id: 4440, handle: 7
+DEBUG:root:[*] added channel id: 7 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 7
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo OAZG']
+DEBUG:root:[*] added process id: 4441, handle: 8
+DEBUG:root:[*] added channel id: 8 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 8
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo Nfoy']
+DEBUG:root:[*] added process id: 4442, handle: 9
+DEBUG:root:[*] added channel id: 9 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 9
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo BJVN']
+DEBUG:root:[*] added process id: 4445, handle: 10
+DEBUG:root:[*] added channel id: 10 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 10
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo UQhF']
+DEBUG:root:[*] added process id: 4449, handle: 11
+DEBUG:root:[*] added channel id: 11 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 11
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo vgJg']
+DEBUG:root:[*] added process id: 4454, handle: 12
+DEBUG:root:[*] added channel id: 12 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 12
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo wXpX']
+DEBUG:root:[*] added process id: 4460, handle: 13
+DEBUG:root:[*] added channel id: 13 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 13
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo eRdN']
+DEBUG:root:[*] added process id: 4463, handle: 14
+DEBUG:root:[*] added channel id: 14 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 14
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', "echo 'axPu'"]
+DEBUG:root:[*] added process id: 4464, handle: 15
+DEBUG:root:[*] added channel id: 15 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 15
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'echo "hKqE"']
+DEBUG:root:[*] added process id: 4465, handle: 16
+DEBUG:root:[*] added channel id: 16 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 16
+DEBUG:root:[*] sending response packet

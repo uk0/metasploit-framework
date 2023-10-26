@@ -1,0 +1,516 @@
+[*] running method core_negotiate_tlv_encryption
+[*] Negotiating TLV encryption
+[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100dc1461f57d942f3617b4cc27b4f5bee415a6960fe2cb66cbbbcca76a7fc328fc2052bf3b8fb571cfb6f998a88d8ff962f26ec150c5ecf8ae6e1f121a3aa7811c43368209dda4ddefcf04c4ffbd6fb176854ea86f7f85c10bc29a41be5c9aad9a69a9565af1e6c6bd1fbebb68675627fcaae7c2d86c889a2633189d9beb0ba470613f5eb451504e9c4c975a4a7fa11fceb6032cdbbfd7d051f192c288abd8047f1851d00ecbe322402d2493d29de886f782df4db9bd720d837a4fae82840add18e9a497f67c81663d4a5b05b9afcb89db75c858ce77d53c1fd6a067d7e26401681cf3c0edaac566a19d90a6381736fc11a6748496268d8b80d442103b6f4cdfa50203010001
+[*] AES key: 0xe62e8f749ed9c71ed202823ddae4a7209e8be47ca7fcb218881b1bc6c6fdfb00
+[*] Encrypted AES key: 0x91aebf789e4c527a4c935a68883e843851cb459fb6bfad2077265a8e35805f0bb6ac163b4c0cf594f76db537ffbb3f663b450387cea8377a889a9391d01d1c03e2c1d347cb8e5864722a3dcc5e634b4a7727327e132d60e14b9dab87e820550d7f1fc1d5ff7a5ae552a1a46069858a7d52ff4d4a7c3010a694bcb45bdc6cecd8c19830620e744b6c9ab31a4442d27d688ed84ce98bb816bc44ec8a22fba9ea24a4de0dee574f668d6ae8fe8ce3665383fe427503882572e0ce3f3e45ec22e23a63b2da305142780e7ecabcc15a573d13973257cf434dc29f2dfb0ae4f04c137983a08485a67c47aa0e820f259c2ae6ffcb2d1da69ae6d4fd97747e9da1025ec
+[*] TLV encryption sorted
+[*] sending response packet
+[*] running method core_set_session_guid
+[*] sending response packet
+[*] running method core_enumextcmd
+[*] sending response packet
+[*] running method core_enumextcmd
+[*] sending response packet
+[*] running method core_loadlib
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet
+[*] running method stdapi_sys_config_getuid
+[*] sending response packet
+[*] running method stdapi_sys_config_sysinfo
+[*] sending response packet
+[*] running method core_set_uuid
+[*] sending response packet
+[*] running method stdapi_net_config_get_interfaces
+[*] sending response packet
+[*] running method stdapi_net_config_get_routes
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet
+[*] running method stdapi_sys_config_getenv
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_file_expand_path
+[*] sending response packet
+[*] running method stdapi_fs_chdir
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir-halmitgr'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method stdapi_fs_file_expand_path
+[*] sending response packet
+[*] running method stdapi_fs_chdir
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: '/etc/'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: '/tmp'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 1 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 1
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir\\directory'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 2 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 2
+[*] sending response packet
+[*] running method stdapi_fs_ls
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_dir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 3 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 3
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_sys_process_execute
+[*] starting process: ['cmd.exe', '/c', 'mklink', '/D', 'meterpreter-test-dir.lnk', 'meterpreter-test-dir']
+[*] added process id: 6296, handle: 704
+[*] added channel id: 4 type: MeterpreterProcess
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_read
+[-] method core_channel_read resulted in error: #1
+[*] sending response packet
+[*] running method stdapi_sys_process_close
+[*] closed and removed process handle: 704
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_dir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir.lnk'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_dir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir.1'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir.2'
+
+[*] sending response packet
+[*] running method stdapi_fs_mkdir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 5 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 5
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_sys_process_execute
+[*] starting process: ['cmd.exe', '/c', 'mklink', '/D', 'meterpreter-test-dir.2/link', 'meterpreter-test-dir.1']
+[*] added process id: 5196, handle: 760
+[*] added channel id: 6 type: MeterpreterProcess
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_read
+[-] method core_channel_read resulted in error: #1
+[*] sending response packet
+[*] running method stdapi_sys_process_close
+[*] closed and removed process handle: 760
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_dir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_dir
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'c:\\boot.ini'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'c:\\pagefile.sys'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '/etc/passwd'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '/etc/master.passwd'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '%WINDIR%\\system32\\notepad.exe'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '%WINDIR%\\system32\\calc.exe'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test'
+
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 7 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 7
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 8 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 8
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 9 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 9
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 10 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 10
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 11 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 11
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 12 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 12
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_file
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-moved'
+
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 13 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 13
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-moved'
+
+[*] sending response packet
+[*] running method stdapi_fs_file_move
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test'
+
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_file
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 14 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 14
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 15 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_close
+[-] method core_channel_close resulted in error: #1
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 15
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_file
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[-] method stdapi_fs_stat resulted in an error
+Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test'
+
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 16 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 16
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 17 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_write
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 17
+[*] sending response packet
+[*] running method core_channel_open
+[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+[*] added channel id: 18 type: MeterpreterFile
+[*] sending response packet
+[*] running method core_channel_read
+[*] sending response packet
+[*] running method core_channel_eof
+[*] sending response packet
+[*] running method core_channel_close
+[*] closed and removed channel id: 18
+[*] sending response packet
+[*] running method stdapi_fs_stat
+[*] sending response packet
+[*] running method stdapi_fs_delete_file
+[*] sending response packet
+[*] running method stdapi_fs_file_expand_path
+[*] sending response packet
+[*] running method stdapi_fs_chdir
+[*] sending response packet
+[*] running method stdapi_fs_getwd
+[*] sending response packet

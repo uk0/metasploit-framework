@@ -1,0 +1,28 @@
+{
+  "required_lines": [
+
+  ],
+  "known_failures": [
+    {
+      "values": [
+        "[-] [should delete a symbolic link target] FAILED: should delete a symbolic link target"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] [should delete a symbolic link target] Exception: Rex::Post::Meterpreter::RequestError: stdapi_fs_delete_dir: Operation failed: 1"
+      ],
+      "options": {
+      }
+    },
+    {
+      "values": [
+        "[-] FAILED: should read the binary data we just wrote"
+      ],
+      "options": {
+      }
+    }
+  ]
+}

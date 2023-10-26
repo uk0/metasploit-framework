@@ -1,0 +1,75 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use java/meterpreter/reverse_tcp
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/javameterpreterreverse_tcp_session_tlv_logging20231026-3240-26jycvtxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-java-meterpreter-reverse-tcp20231026-3240-mcgc0j.jar -f jar AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/javameterpreterreverse_tcp_debug_log20231026-3240-gsblyntxt spawn=0
+SessionTlvLogging => file:/tmp/javameterpreterreverse_tcp_session_tlv_logging20231026-3240-26jycvtxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> [*] Writing 5259 bytes to /tmp/child-process-rb-java-meterpreter-reverse-tcp20231026-3240-mcgc0j.jar...
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:53296) at 2023-10-26 19:02:18 +0000
+use test/file
+[4mmsf6[0m post([1m[31mtest/file[0m) [0m> run session=1 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /tmp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-qijdpbrx
+[*] meterpreter-test-dir-qijdpbrx created
+[*] Setup: Now in /tmp/meterpreter-test-dir-qijdpbrx
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod
+[*] Running against session 1
+[*] Session type is meterpreter and platform is linux
+[+] should test for directory existence
+[*] [should create directories] Creating directory meterpreter-test-dir
+[*] [should create directories] meterpreter-test-dir created
+[*] [should create directories] Creating directory meterpreter-test-dir/directory
+[*] [should create directories] meterpreter-test-dir/directory created
+[+] should create directories
+[+] should list the directory we just made
+[+] should recursively delete the directory we just made
+[*] [should delete a symbolic link target] Creating directory meterpreter-test-dir
+[*] [should delete a symbolic link target] meterpreter-test-dir created
+[+] should delete a symbolic link target
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.1
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.1 created
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.2
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.2 created
+[+] should not recurse into symbolic link directories
+[*] [should write binary data] Writing 128000 bytes
+[*] [should write binary data] Finished in 0.092313641
+[+] should write binary data
+[*] [should read the binary data we just wrote] Read 128000 bytes
+[+] should read the binary data we just wrote
+[+] should delete binary files
+[*] [should append binary data] expected: [222, 173, 190, 239] - ASCII-8BIT
+[*] [should append binary data] actual: [222, 173, 190, 239] - ASCII-8BIT
+[+] should append binary data
+[+] should test for file existence
+[+] should create text files
+[+] should read the text we just wrote
+[+] should append text files
+[+] should delete text files
+[+] should move files
+[+] should expand home
+[+] should not expand non-isolated tilde
+[+] should not expand mid-string tilde
+[+] should not expand env vars with invalid naming
+[+] should expand multiple variables
+[*] Testing complete in 1.49 seconds
+[*] Passed: 21; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to /home/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/file[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[4mmsf6[0m post([1m[31mtest/file[0m) [0m> 

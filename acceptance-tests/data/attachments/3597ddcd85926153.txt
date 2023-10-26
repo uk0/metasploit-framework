@@ -1,0 +1,47 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use php/meterpreter_reverse_tcp
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3371-60iu7txt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-php-meterpreter-reverse-tcp20231026-3371-anvsbt.php -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/phpmeterpreter_reverse_tcp_debug_log20231026-3371-qlrfovtxt MeterpreterDebugBuild=true
+SessionTlvLogging => file:/tmp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3371-60iu7txt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> [*] Writing 34908 bytes to /tmp/child-process-rb-php-meterpreter-reverse-tcp20231026-3371-anvsbt.php...
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:38392) at 2023-10-26 19:01:57 +0000
+use test/search
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> run session=1 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /tmp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-uixoswcg
+[*] meterpreter-test-dir-uixoswcg created
+[*] Setup: Now in /tmp/meterpreter-test-dir-uixoswcg
+[*] Source File Name: meterpreter-test-bgsyofxj.txt
+[*] Running against session 1
+[*] Session type is meterpreter and platform is linux
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[+] should search with date inclusive of exact date
+[*] Testing complete in 0.29 seconds
+[*] Passed: 8; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to /home/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> [*] Killing all sessions...
+jobs -K
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[4mmsf6[0m post([1m[31mtest/search[0m) [0m> 

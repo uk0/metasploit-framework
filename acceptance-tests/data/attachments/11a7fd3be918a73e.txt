@@ -1,0 +1,36 @@
+D:/a/metasploit-framework/metasploit-framework/vendor/bundle/ruby/3.0.0/gems/rex-core-0.1.31/lib/rex/compat.rb:381: warning: Win32API is deprecated after Ruby 1.9.1; use fiddle directly instead
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+msf6 > loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+msf6 > use python/meterpreter_reverse_tcp
+msf6 payload(python/meterpreter_reverse_tcp) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-sppnketxt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-gcyaif.py -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5252-alyaxwtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-sppnketxt
+msf6 payload(python/meterpreter_reverse_tcp) > [*] Writing 24924 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-gcyaif.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 0
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:50086) at 2023-10-26 19:04:32 +0000
+use test/railgun_reverse_lookups
+msf6 post(test/railgun_reverse_lookups) > run session=1 AddEntropy=true Verbose=true
+[*] Running against session 1
+[*] Session type is meterpreter and platform is windows
+[*] SKIPPED: def test_osx_static (session platform is not osx)
+[*] SKIPPED: def test_linux_static (session platform is not osx)
+[+] should return a constant name given a const and a filter
+[+] should return an error string given an error code
+[*] Testing complete in 0.38 seconds
+[*] Passed: 4; Failed: 0; Skipped: 2
+[*] Post module execution completed
+msf6 post(test/railgun_reverse_lookups) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+msf6 post(test/railgun_reverse_lookups) > Stopping all jobs...
+msf6 post(test/railgun_reverse_lookups) > 

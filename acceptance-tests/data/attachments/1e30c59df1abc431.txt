@@ -1,0 +1,532 @@
+Final status:
+Process still alive after running test suite
+stdout and stderr:
+DEBUG:root:[*] changing transport to: tcp://127.0.0.1:6001
+DEBUG:root:[*] running method core_negotiate_tlv_encryption
+DEBUG:root:[*] Negotiating TLV encryption
+DEBUG:root:[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100e425cf5625a8683479527ce1ed22509a4542899fb2e94df28aedd8e4f9a13e66eeb68ff6eb3c6d42471ca88d48aec290e0e8b4f15768245319bdd93fbe6209c4ec852d6f7966553e5c0d273ea09a28587ec5a69760d762beabef8ea36df3b40e45969c0dbdab9cc5891aed4bec4d2f646287975b7b438fa114b8e1a29c57e8329a50ccb44ea44bf6ea32b2ece6f2d10df5b8417ae1a57123238dee72cdde80e1c79bacd28d1643a1d8c10a975fb7b7469c61a92867f3497f445439ae4d4cf9e5a789842cb988e289c9b6aad17d11a784f1acb6f997662128d6af0b3e284af4df7cb1b315387a78d13ca5c92414e9d0b7cc001bcb6bd39a2bd410a28e7baa2af30203010001
+DEBUG:root:[*] AES key: 0x970cc6b07e165aaf6fab1eb1f682a66e86d3f2dd4d5db2973fdaabdbd6428844
+DEBUG:root:[*] Encrypted AES key: 0x26fb3fd2a81e74f8b028e7363d1e2ac959cef66c3a422e1dd3526b0076a6f0071995914d253f308f5159295ac3b44281f3e9df6e080f7a0d830d011a5c756b53d9a73ebc644c1dd24b0c65f296609c015a1f3b38a2d39f56fe8d209bd0b0f04321aab5586e4e004859285d0f194a88df8a5c65407d20448608fbebcfd43b51edbed204a20a68558de8cc4ed146103a27847c2b56a4388ea49fd83c77443bf2d2d77d587e700aed61c9510fd297ae62806fc8beccbb6267a1e2ff9345c6bc4ccd3310b574e8678ce7a4635e15a442c6a3337e578ddd970af943da196d383277f1ed35838d1f3dbe04b4dc1596ac2b6f488048256ae7e75b8be5f0eb0680df2a89
+DEBUG:root:[*] TLV encryption sorted
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_session_guid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_loadlib
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_sysinfo
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_uuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_separator
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir-qutplvki'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 1 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir/directory'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 2 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 2
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'command -v ln || which ln && echo THEHSMYB']
+DEBUG:root:[*] added process id: 3337, handle: 1
+DEBUG:root:[*] added channel id: 3 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 4 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 4
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'ln -s $(pwd)/meterpreter-test-dir $(pwd)/meterpreter-test-dir.lnk']
+DEBUG:root:[*] added process id: 3342, handle: 2
+DEBUG:root:[*] added channel id: 5 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 2
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir.lnk'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir.1'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir.2'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 6 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 6
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', 'ln -s $(pwd)/meterpreter-test-dir.1 $(pwd)/meterpreter-test-dir.2/link']
+DEBUG:root:[*] added process id: 3349, handle: 3
+DEBUG:root:[*] added channel id: 7 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 3
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 8 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 8
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 9 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 9
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 10 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 10
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 11 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 11
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 12 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 12
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\boot.ini'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\pagefile.sys'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/master.passwd'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: '%WINDIR%\\system32\\notepad.exe'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: '%WINDIR%\\system32\\calc.exe'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 13 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 13
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 14 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 14
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 15 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 15
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 16 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 16
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 17 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 17
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 18 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 18
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-moved'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 19 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 19
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-moved'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_move
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[-] method core_channel_close resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet

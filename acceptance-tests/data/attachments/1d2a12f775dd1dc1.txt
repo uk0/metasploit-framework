@@ -1,0 +1,445 @@
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=16 command=core_negotiate_tlv_encryption>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="96154980516942549566776239038861">
+  #<Rex::Post::Meterpreter::Tlv type=RSA_PUB_KEY     meta=RAW        value="0\x82\x01\"0\r\x06\t*\x86H\x86\xF7\r\x01\x01\x01\ ...">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=16 command=core_negotiate_tlv_encryption>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="96154980516942549566776239038861">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=SYM_KEY_TYPE    meta=INT        value=1>
+  #<Rex::Post::Meterpreter::Tlv type=ENC_SYM_KEY     meta=RAW        value="\x8Cr\x83\xBB\xDCEt\xE7O\xDB\xD5J}\xCBLK\x15=b\x9 ...">
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=21 command=core_set_session_guid>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="13871578273533573309183527707738">
+  #<Rex::Post::Meterpreter::Tlv type=SESSION_GUID    meta=RAW        value="\x9D!\x00\x0El\xD1J\f\xA7\x95\x1A;/z\b\x82">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=21 command=core_set_session_guid>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="13871578273533573309183527707738">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=10 command=core_enumextcmd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="99538238162918895351737682505813">
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=LENGTH          meta=INT        value=1000>
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=10 command=core_enumextcmd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="99538238162918895351737682505813">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=10 command=core_enumextcmd>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=13 command=core_machine_id>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=22 command=core_set_uuid>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=11 command=core_get_session_guid>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=21 command=core_set_session_guid>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=16 command=core_negotiate_tlv_encryption>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=12 command=core_loadlib>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=23 command=core_shutdown>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=4  command=core_channel_open>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=2  command=core_channel_eof>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=6  command=core_channel_seek>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=7  command=core_channel_tell>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=5  command=core_channel_read>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=8  command=core_channel_write>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1  command=core_channel_close>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=3  command=core_channel_interact>
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=10 command=core_enumextcmd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="99829315319670081703933159273887">
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1000>
+  #<Rex::Post::Meterpreter::Tlv type=LENGTH          meta=INT        value=1000>
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=10 command=core_enumextcmd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="99829315319670081703933159273887">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1001 command=stdapi_fs_chdir>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1004 command=stdapi_fs_delete_file>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1006 command=stdapi_fs_file_expand_path>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1007 command=stdapi_fs_file_move>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1005 command=stdapi_fs_file_copy>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1002 command=stdapi_fs_chmod>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1008 command=stdapi_fs_getwd>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1011 command=stdapi_fs_mkdir>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1003 command=stdapi_fs_delete_dir>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1009 command=stdapi_fs_ls>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1013 command=stdapi_fs_search>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1014 command=stdapi_fs_separator>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1016 command=stdapi_fs_stat>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1010 command=stdapi_fs_md5>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1015 command=stdapi_fs_sha1>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1026 command=stdapi_net_socket_tcp_shutdown>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1019 command=stdapi_net_config_get_interfaces>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1022 command=stdapi_net_config_get_routes>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1017 command=stdapi_net_config_add_route>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1023 command=stdapi_net_config_remove_route>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1018 command=stdapi_net_config_get_arp_table>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1021 command=stdapi_net_config_get_proxy>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1020 command=stdapi_net_config_get_netstat>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1024 command=stdapi_net_resolve_host>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1025 command=stdapi_net_resolve_hosts>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1052 command=stdapi_sys_config_getenv>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1055 command=stdapi_sys_config_getuid>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1059 command=stdapi_sys_config_sysinfo>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1056 command=stdapi_sys_config_localtime>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1071 command=stdapi_sys_process_get_processes>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1067 command=stdapi_sys_process_attach>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1068 command=stdapi_sys_process_close>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1069 command=stdapi_sys_process_execute>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1077 command=stdapi_sys_process_kill>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1071 command=stdapi_sys_process_get_processes>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1072 command=stdapi_sys_process_getpid>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1070 command=stdapi_sys_process_get_info>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1095 command=stdapi_sys_process_wait>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1118 command=stdapi_sys_process_set_term_size>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1112 command=stdapi_webcam_list>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1113 command=stdapi_webcam_start>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1114 command=stdapi_webcam_stop>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1111 command=stdapi_webcam_get_frame>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1098 command=stdapi_ui_desktop_screenshot>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1105 command=stdapi_ui_send_keys>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1104 command=stdapi_ui_send_keyevent>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1106 command=stdapi_ui_send_mouse>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1117 command=stdapi_audio_mic_list>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1115 command=stdapi_audio_mic_start>
+  #<Rex::Post::Meterpreter::Tlv type=UINT            meta=INT        value=1116 command=stdapi_audio_mic_stop>
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1008 command=stdapi_fs_getwd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="80783604450926505813261056668726">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1008 command=stdapi_fs_getwd>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="80783604450926505813261056668726">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=DIRECTORY_PATH  meta=STRING     value="/Users/runner/work/metasploit-framework/metasploit-framework">
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1055 command=stdapi_sys_config_getuid>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="78408980770754418134434714013855">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1055 command=stdapi_sys_config_getuid>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="78408980770754418134434714013855">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=USER_NAME       meta=STRING     value="runner">
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1059 command=stdapi_sys_config_sysinfo>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="81181744795497985518642213880619">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1059 command=stdapi_sys_config_sysinfo>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="81181744795497985518642213880619">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=COMPUTER_NAME   meta=STRING     value="Mac-1698328030577.local">
+  #<Rex::Post::Meterpreter::Tlv type=OS_NAME         meta=STRING     value="macOS Big Sur (macOS 11.7.10)">
+  #<Rex::Post::Meterpreter::Tlv type=ARCHITECTURE    meta=STRING     value="x86">
+  #<Rex::Post::Meterpreter::Tlv type=BUILD_TUPLE     meta=STRING     value="x86_64-apple-darwin">
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1019 command=stdapi_net_config_get_interfaces>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="45277399764214754298182641633016">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1019 command=stdapi_net_config_get_interfaces>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="45277399764214754298182641633016">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1022 command=stdapi_net_config_get_routes>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="84606735051434884313488149362448">
+]>
+
+RECV: #<Rex::Post::Meterpreter::Packet type=Response        tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=UUID            meta=RAW        value="\xE5\xD6\xEE\xCBL\xEC\xA9FS\xF3Z\xF16\xC9\xEB\xCA">
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=1022 command=stdapi_net_config_get_routes>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="84606735051434884313488149362448">
+  #<Rex::Post::Meterpreter::Tlv type=RESULT          meta=INT        value=0>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\b\b\b\b">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\nM\x01e">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\nO\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\xFF\xFF\xF0\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\nO\nN">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\rk*\x10">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x119\x91\x94">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x119\x91\x95">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x11\xF8\xC3I">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x11\xF8\xC8C">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x11\xFD\x15\xCD">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x11\xFD\x15\xCE">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x14\x16\xA6\x0F">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x14\x96Z\x04">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x14\x96Z\xC4">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x14\xF6\xB8\xF0">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x14\xF6\xC0|">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x177<\"">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="4\xEF\xD6D">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="4\xEF\xDCd">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="C\xC3\xCC8">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="hL\xD2Y">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x7F\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\xFF\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x7F\x00\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="lo0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x7F\x00\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x7F\x00\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="lo0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x8CRp\x03">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x8CRp\x18">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x8CRq\t">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x8CRq\x17">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x8CRr\x06">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\x97eA\xE3">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\xA9\xFE\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\xFF\xFF\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\xB9\xC7l\x85">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\xC0\xE5\xD3l">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\nO\x00\x01">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\xE0\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\xF0\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+  #<Rex::Post::Meterpreter::GroupTlv type=NETWORK_ROUTE   tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=SUBNET          meta=RAW        value="\xFF\xFF\xFF\xFF">
+  #<Rex::Post::Meterpreter::Tlv type=NETMASK         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=GATEWAY         meta=RAW        value="\x00\x00\x00\x00">
+  #<Rex::Post::Meterpreter::Tlv type=ROUTE_METRIC    meta=INT        value=0>
+  #<Rex::Post::Meterpreter::Tlv type=STRING          meta=STRING     value="en0">
+]>
+]>
+
+SEND: #<Rex::Post::Meterpreter::Packet type=Request         tlvs=[
+  #<Rex::Post::Meterpreter::Tlv type=COMMAND_ID      meta=INT        value=23 command=core_shutdown>
+  #<Rex::Post::Meterpreter::Tlv type=REQUEST_ID      meta=STRING     value="23434311092248841821908052352243">
+]>

@@ -1,0 +1,55 @@
+use java/meterpreter/reverse_tcp
+msf6 post(test/registry) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-tx7vr4txt
+msf6 payload(java/meterpreter/reverse_tcp) > msf6 payload(java/meterpreter/reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/javameterpreterreverse_tcp_session_tlv_logging20231026-3620-tx7vr4txt
+msf6 payload(java/meterpreter/reverse_tcp) > generate -o D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-147hy0.jar -f jar AutoVerifySessionTimeout=30 lport=6008 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/javameterpreterreverse_tcp_debug_log20231026-3620-hywkfatxt spawn=0
+[*] Writing 5259 bytes to D:/a/_temp/child-process-rb-java-meterpreter-reverse-tcp20231026-3620-147hy0.jar...
+msf6 payload(java/meterpreter/reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 7
+msf6 payload(java/meterpreter/reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6008 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 8 opened (127.0.0.1:6008 -> 127.0.0.1:50189) at 2023-10-26 19:05:36 +0000
+use test/services
+msf6 post(test/services) > run session=8 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * unloadable Meterpreter extension: extapi
+[*] Running against session 8
+[*] Session type is meterpreter and platform is windows
+[-] [should return status on a given service winmgmt] FAILED: should return status on a given service winmgmt
+[-] [should return status on a given service winmgmt] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[*] [should modify config on a given service] creating new service aWlvUB
+[-] [should modify config on a given service] FAILED: should modify config on a given service
+[-] [should modify config on a given service] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should start W32Time] FAILED: should start W32Time
+[-] [should start W32Time] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should stop W32Time] FAILED: should stop W32Time
+[-] [should stop W32Time] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[*] SKIPPED: def test_list (reg query support skipped for now as the query takes more than two minutes)
+[*] [should start a disabled service] creating new service apWRRN
+[-] [should start a disabled service] FAILED: should start a disabled service
+[-] [should start a disabled service] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[*] [should return info on a given service winmgmt] Service details: {:display=>"@%Systemroot%\\system32\\wbem\\wmisvc.dll,-205", :starttype=>2, :path=>"%systemroot%\\system32\\svchost.exe -k netsvcs -p", :startname=>"localSystem", :dacl=>nil, :logroup=>nil, :interactive=>nil}
+[+] should return info on a given service winmgmt
+[-] [should restart a started service W32Time] FAILED: should restart a started service W32Time
+[-] [should restart a started service W32Time] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should create a service testes] FAILED: should create a service testes
+[-] [should create a service testes] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should return info on the newly-created service testes] Could not retrieve the start type of the testes service!
+[-] FAILED: should return info on the newly-created service testes
+[-] [should delete the new service testes] FAILED: should delete the new service testes
+[-] [should delete the new service testes] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should raise a runtime exception if no access to service] FAILED: should raise a runtime exception if no access to service
+[-] [should raise a runtime exception if no access to service] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[-] [should raise a runtime exception if services doesnt exist] FAILED: should raise a runtime exception if services doesnt exist
+[-] [should raise a runtime exception if services doesnt exist] Exception: Rex::Post::Meterpreter::RequestError: stdapi_railgun_api: Operation failed: The command is not supported by this Meterpreter type (java/windows)
+[*] Testing complete in 0.72 seconds
+[-] Passed: 2; Failed: 11; Skipped: 1
+[*] Post module execution completed
+msf6 post(test/services) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 8 closed.
+msf6 post(test/services) > Stopping all jobs...
+msf6 post(test/services) > 

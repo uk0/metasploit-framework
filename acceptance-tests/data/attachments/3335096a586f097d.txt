@@ -1,0 +1,270 @@
+Final status:
+Process still alive after running test suite
+stdout and stderr:
+DEBUG:root:[*] running method core_negotiate_tlv_encryption
+DEBUG:root:[*] Negotiating TLV encryption
+DEBUG:root:[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100d5bf939355dedc080cce4bc0b5aa12165ea2b5444c9660dc6604b19dcf12bd30c717e7329338f978faf8335a3ccd13217391ad49df7d4c8fd3abac12ff73af2145b5517b6a830e7203b841f7cebd0dd5e3632f27a75856919e48df52e9583652f10bef8de71e418acbc5c2428944666089eeb6691dd7adee5d8468e7db8cb7cf8303e6b83d308e621aaa297af3a1a87cc6f15542379d34bec1533462b33ba7ff559fb6a4fad3f5bd648c2483bece80e0811c90d1ca187643fadade5bdd558437a0e28f5d152488b94c8faa8a5fc2de3f12161c03f5f66402f967eda0a92ad66950bf119ab82a6c998c09c9109934e874559a833f6d18277bc5fb0776f59a53db0203010001
+DEBUG:root:[*] AES key: 0xa6e0350b5a5f518f418251ab09c5f7e1c1337fe12cc2c06d5a8be4b4fd0669ca
+DEBUG:root:[*] Encrypted AES key: 0x8d187ab8f155fa240086f7faa87b22ab4e10aa8986e01ddfb1bfeb3ce1978d47837b98fa20012ac5cb17f2e82c756318a325628b46f5a0636b1f94064b213e2cea2ac7fcd38b25ee1f7836cffa52b28ae923a39514680ed4a37bbefdf0c92345a09e399618695e6dace5a2e43da5a7bbfdaefbd655da75c0cc4995f8825ed8036a7255a4bd65ed778ff29a90aa7345e5a2bed56f624bb03c7d93be412016849a55fa912b371e93d0f0dd219d5419f80faa4c7516876f221a6101a27c59c1512e14c987a4e07a83efd68190782c5bfc04329a72017f41750e1a2f67a24a197698f519db3c7939ead166a4c69eb582aa95a9661f774eca93c103306dfb0af409e6
+DEBUG:root:[*] TLV encryption sorted
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_session_guid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_loadlib
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_sysinfo
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_uuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir-jfumckei'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_separator
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[-] method stdapi_fs_delete_dir resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[-] method stdapi_fs_delete_dir resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_dir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 1 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 2 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 2
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 3 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_tell
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_tell
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 3
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 4 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_eof
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 4
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-horuwvai
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-horuwvai-moved
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 5 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 5
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_move
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-horuwvai
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-horuwvai
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-horuwvai-copied
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 6 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 6
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_copy
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_ls
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 7 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_write
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_tell
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_tell
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 7
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_md5
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_sha1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] failed to lookup id for command string: channel_open_stdapi_fs_file
+DEBUG:root:[*] failed to lookup id for command string: channel_open_stdapi_net_tcp_client
+DEBUG:root:[*] failed to lookup id for command string: channel_open_stdapi_net_tcp_server
+DEBUG:root:[*] failed to lookup id for command string: channel_open_stdapi_net_udp_client
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_getpid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_get_processes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet

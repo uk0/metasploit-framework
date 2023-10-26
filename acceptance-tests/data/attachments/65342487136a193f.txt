@@ -1,0 +1,102 @@
+Final status:
+Process still alive after running test suite
+stdout and stderr:
+DEBUG:root:[*] running method core_negotiate_tlv_encryption
+DEBUG:root:[*] Negotiating TLV encryption
+DEBUG:root:[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100bce81f9ebdef21b7994d299b0a122fd0ff4227fee4bd1d59711b4d387a560388144bc44bc0c39417b83f9b1eccba052fef4108782c587fa337ce39238451fa51d924473ae9fdc587a9b5ca8550c459d98b8ecf81c56b216bb1f5bf29a9b66221e25dcb4555fe072993f769fcce1301ca61946e693f056d78f054d4148f0d33a67be71006d175e1d6f719c585874ed81fbcdb1945b0e021a73d9646601a0959aaaea49b840e33cca450e70b79d62baac13d233ea2d74bb0653712f819d73e098c954b84fab6b710486dbb93a02e2d11fb6ee63a08c0c2157735f66d5e9999503cb6f5bb34ac6c1e02eb76e648f5a86e7b6c26bf9ffc71d93a2a950b77a1b5a9f30203010001
+DEBUG:root:[*] AES key: 0x27c3da50784b7e4d0f2281cc4a6d801ec773ba32579a6394464b30473af35f8f
+DEBUG:root:[*] Encrypted AES key: 0x2b9c11bd806199ff476eacc992b4b8f62f76cf6412e4f0a652f8e1cbcfc91aa8503e7effa19f9af7af9113307ce0571a65e74fae1935a9f4111a6fc6d1eb7ca6e225e603a315eebf66915f9a43496ba6116e0e6b551f5dc3e09f1ad47fd16bd26f5e48ea4078704abaed9e02c8efd4bc55751200422477923cfa4243189a1fa072c8e39c417c21fb68c55830f69117e7fa1e5cbbc1dbebea0392bd8d5e7f85bb82652bc1bab18bdc4ddda42fb71ca183b7e3306abb9788f2ef5653935cfdabdb68eb3b19845b1a0526c64d1b26bb6d2d60f9349e29e3470903b24641ca0ac2e4f3a5670de632ea0c6d4afdfeb286fcb22d000dee0f251e09b392682221e09357
+DEBUG:root:[*] TLV encryption sorted
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_session_guid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_loadlib
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_sysinfo
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_uuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'meterpreter-test-dir-islfadng'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-pquifvad.txt
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 1 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_separator
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_file_expand_path
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+File not found - meterpreter-test-pquifvad.txt
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet

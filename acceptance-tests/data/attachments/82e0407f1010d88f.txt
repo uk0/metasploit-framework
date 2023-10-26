@@ -1,0 +1,42 @@
+use php/meterpreter_reverse_tcp
+msf6 post(test/railgun_reverse_lookups) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-7r7igrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-7r7igrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-kgr89x.php -f raw AutoVerifySessionTimeout=30 lport=6005 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-4920-vyg9tgtxt MeterpreterDebugBuild=true
+[*] Writing 34914 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-kgr89x.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 4
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6005 
+[*] Meterpreter session 5 opened (127.0.0.1:6005 -> 127.0.0.1:50030) at 2023-10-26 19:04:15 +0000
+use test/search
+msf6 post(test/search) > run session=5 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-djobhvql
+[*] meterpreter-test-dir-djobhvql created
+[*] Setup: Now in C:\Users\RUNNER~1\AppData\Local\Temp\meterpreter-test-dir-djobhvql
+[*] Source File Name: meterpreter-test-plnfbzcw.txt
+[*] Running against session 5
+[*] Session type is meterpreter and platform is windows
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[*] Session does not support setting the modified date, skipping exact date tests
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Testing complete in 0.17 seconds
+[*] Passed: 7; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to D:\a\metasploit-framework\metasploit-framework
+[*] Post module execution completed
+msf6 post(test/search) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 5 closed.
+msf6 post(test/search) > Stopping all jobs...
+msf6 post(test/search) > 

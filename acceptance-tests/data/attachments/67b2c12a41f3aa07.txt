@@ -1,0 +1,117 @@
+Final status:
+Process still alive after running test suite
+stdout and stderr:
+DEBUG:root:[*] running method core_negotiate_tlv_encryption
+DEBUG:root:[*] Negotiating TLV encryption
+DEBUG:root:[*] RSA key: 30820122300d06092a864886f70d01010105000382010f003082010a0282010100b3f21db44b85af9f8ef933b52c77483981013a96ec78fb2dbd859ac6f014e15b311e392a18934260a904d71c96e863f8c3ae20d7019ef301dbe7aa6851ce322869d91e304a2d4aad6b464357f8b96bdb4375cf7401b055c742c2a679f26615b6a76bad7eee88460ce83a8ba1b545898b41bda1dd7a8fb4a8d43d8f598c0de986008eae1d28a9b92f5de6703d1f37a448b311cfb9e1ce062ae7d9e7eaf39d979e3e45c09da5142400959ab22f713643984bc5d82e073bffda8895bda7a631947453270c8350ef90b999b02459800f789385bd9a67d6cd754adf964b55942fca9980c2f627f85fbfa393510cf71fef46449614e7c601baf279338354a4f3bdcb730203010001
+DEBUG:root:[*] AES key: 0x64b563e3ea3ac635925efac9b648a5b7b215dc34874641472f67d81830f0b600
+DEBUG:root:[*] Encrypted AES key: 0x7fd6c415c3693a6439583804b35e045b4eb539df21b786406d7220934a6f36f1c3ca6d9a564cea758f475b4e89fd05a05811850f7c3512b84ba8baac3090d1bef96477986663871dcea7e7ba66e856001e9b69057ce112c12f981a951ffe4db2672a3716919b61731d109ef2fe3e2d8cd1e2905c1e476c1dc110b2fdd44370ef76c068d6cbb95c937ac92d3b619d460c677c0630b8603efe45d984af07f935f18655fb808d5230f96894f0288b9a6806972e2088612f1994dd5a989b2ffbb5edb31714dd71c7d30d54c18efbac0ebea62673477f8efc9ebee32c6e54baf82f88dd29d32b78f7e45aec95713454bd120f76303d7f50b256fa563063b8a31c731e
+DEBUG:root:[*] TLV encryption sorted
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_session_guid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_enumextcmd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_loadlib
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_sysinfo
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_set_uuid
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_interfaces
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_net_config_get_routes
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_separator
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_stat
+DEBUG:root:[-] method stdapi_fs_stat resulted in an error
+DEBUG:root:Traceback (most recent call last):
+  File "<string>", line 1717, in create_response
+  File "ext_server_stdapi.py", line 2084, in stdapi_fs_stat
+  File "ext_server_stdapi.py", line 891, in get_stat_buffer
+FileNotFoundError: [Errno 2] No such file or directory: 'meterpreter-test-dir-uocbmktn'
+
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_mkdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_open
+DEBUG:root:[*] core_channel_open dispatching to handler: channel_open_stdapi_fs_file
+DEBUG:root:[*] added channel id: 1 type: MeterpreterFile
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_close
+DEBUG:root:[*] closed and removed channel id: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_execute
+DEBUG:root:[*] starting process: ['/bin/sh', '-c', "touch -d '3 January 2009 18:15:13 +0000' meterpreter-test-zxyisvmq.txt"]
+DEBUG:root:[*] added process id: 3497, handle: 1
+DEBUG:root:[*] added channel id: 2 type: MeterpreterProcess
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method core_channel_read
+DEBUG:root:[-] method core_channel_read resulted in error: #1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_process_close
+DEBUG:root:[*] closed and removed process handle: 1
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_search
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_sys_config_getenv
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_chdir
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_getwd
+DEBUG:root:[*] sending response packet
+DEBUG:root:[*] running method stdapi_fs_delete_file
+DEBUG:root:[-] method stdapi_fs_delete_file resulted in error: #1
+DEBUG:root:[*] sending response packet
